@@ -284,7 +284,7 @@ public class AGTimers: Codable {
 	static var dailyAssignments = AGTimer(name: "Daily Assignments",
 									  type: TimerType.daily(start: TimeOfDay(hour: 3, minute: 0)))
 	
-	static var dailyLiasons = AGTimer(name: "Daily Liasons",
+	static var dailyLiaison = AGTimer(name: "Daily Liaison",
 									  type: TimerType.daily(start: TimeOfDay(hour: 0, minute: 0)))
 
 	static var dailyClan = AGTimer(name: "Daily Clan Assignments",
@@ -322,7 +322,7 @@ public class AGTimers: Codable {
 	
 	var defaultTimers = [dailyMarket,
 						 dailyAssignments,
-						 dailyLiasons,
+						 dailyLiaison,
 						 dailyClan,
 						 communityThursday,
 						 weeklyMarket,
