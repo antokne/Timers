@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct HWMTimersApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+	
+	@StateObject var timerNotificationService = TimerNotificationService()
+	
+	var body: some Scene {
+		WindowGroup {
+			ContentView(assignmentViewModel: AGAssignmentViewModel(timerService: timerNotificationService))
+				.environmentObject(timerNotificationService)
+		}
+	}
+	
 }

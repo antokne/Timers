@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E45376792AA0127900BFA32C /* BevelledCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376782AA0127900BFA32C /* BevelledCorner.swift */; };
+		E453767C2AA0485700BFA32C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453767B2AA0485700BFA32C /* SettingsView.swift */; };
+		E453767E2AA04B9B00BFA32C /* TimerNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453767D2AA04B9B00BFA32C /* TimerNotificationService.swift */; };
+		E45376812AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376802AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift */; };
+		E45376832AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376822AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift */; };
+		E45376852AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376842AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift */; };
+		E4EC3E362AA68E72003B0E3B /* TimersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC3E352AA68E72003B0E3B /* TimersTests.swift */; };
 		E4FABD532A9C41B300C93EA8 /* HWMTimersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD522A9C41B300C93EA8 /* HWMTimersApp.swift */; };
 		E4FABD552A9C41B300C93EA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD542A9C41B300C93EA8 /* ContentView.swift */; };
 		E4FABD572A9C41B300C93EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FABD562A9C41B300C93EA8 /* Assets.xcassets */; };
@@ -14,6 +21,14 @@
 		E4FABD642A9C41B300C93EA8 /* HWMTimersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD632A9C41B300C93EA8 /* HWMTimersTests.swift */; };
 		E4FABD6E2A9C41B400C93EA8 /* HWMTimersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD6D2A9C41B400C93EA8 /* HWMTimersUITests.swift */; };
 		E4FABD702A9C41B400C93EA8 /* HWMTimersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD6F2A9C41B400C93EA8 /* HWMTimersUITestsLaunchTests.swift */; };
+		E4FABD7E2A9C4BE600C93EA8 /* AGTimers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD7D2A9C4BE600C93EA8 /* AGTimers.swift */; };
+		E4FABD822A9C510600C93EA8 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD812A9C510600C93EA8 /* Star.swift */; };
+		E4FABD852A9D47F900C93EA8 /* NiceNotifications in Frameworks */ = {isa = PBXBuildFile; productRef = E4FABD842A9D47F900C93EA8 /* NiceNotifications */; };
+		E4FABD882A9D56C200C93EA8 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD872A9D56C200C93EA8 /* TimerTests.swift */; };
+		E4FABD8B2A9D810400C93EA8 /* AssignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD8A2A9D810400C93EA8 /* AssignmentView.swift */; };
+		E4FABD8D2A9D823700C93EA8 /* AGAssignmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD8C2A9D823700C93EA8 /* AGAssignmentViewModel.swift */; };
+		E4FABD902A9D9B2F00C93EA8 /* Michroma-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4FABD8F2A9D9B2F00C93EA8 /* Michroma-Regular.ttf */; };
+		E4FABD942A9D9D4D00C93EA8 /* HWMTimerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD932A9D9D4D00C93EA8 /* HWMTimerTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E45376782AA0127900BFA32C /* BevelledCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BevelledCorner.swift; sourceTree = "<group>"; };
+		E453767B2AA0485700BFA32C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E453767D2AA04B9B00BFA32C /* TimerNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNotificationService.swift; sourceTree = "<group>"; };
+		E45376802AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGrantNotificationAccessView.swift; sourceTree = "<group>"; };
+		E45376822AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGrantAccessViewModel.swift; sourceTree = "<group>"; };
+		E45376842AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WillEnterForegroundEventModifier.swift; sourceTree = "<group>"; };
+		E4EC3E352AA68E72003B0E3B /* TimersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersTests.swift; sourceTree = "<group>"; };
 		E4FABD4F2A9C41B300C93EA8 /* HWMTimers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWMTimers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FABD522A9C41B300C93EA8 /* HWMTimersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimersApp.swift; sourceTree = "<group>"; };
 		E4FABD542A9C41B300C93EA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +66,14 @@
 		E4FABD692A9C41B400C93EA8 /* HWMTimersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HWMTimersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FABD6D2A9C41B400C93EA8 /* HWMTimersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimersUITests.swift; sourceTree = "<group>"; };
 		E4FABD6F2A9C41B400C93EA8 /* HWMTimersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E4FABD7D2A9C4BE600C93EA8 /* AGTimers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGTimers.swift; sourceTree = "<group>"; };
+		E4FABD812A9C510600C93EA8 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		E4FABD872A9D56C200C93EA8 /* TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
+		E4FABD8A2A9D810400C93EA8 /* AssignmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentView.swift; sourceTree = "<group>"; };
+		E4FABD8C2A9D823700C93EA8 /* AGAssignmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAssignmentViewModel.swift; sourceTree = "<group>"; };
+		E4FABD8F2A9D9B2F00C93EA8 /* Michroma-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Michroma-Regular.ttf"; sourceTree = "<group>"; };
+		E4FABD912A9D9CEA00C93EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E4FABD932A9D9D4D00C93EA8 /* HWMTimerTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimerTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FABD852A9D47F900C93EA8 /* NiceNotifications in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +102,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E45376772AA0123E00BFA32C /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				E4FABD812A9C510600C93EA8 /* Star.swift */,
+				E45376782AA0127900BFA32C /* BevelledCorner.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		E453767A2AA0484000BFA32C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E453767B2AA0485700BFA32C /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E453767F2AA53B4D00BFA32C /* GrantNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				E45376822AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift */,
+				E45376802AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift */,
+			);
+			path = GrantNotifications;
+			sourceTree = "<group>";
+		};
 		E4FABD462A9C41B300C93EA8 = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +151,16 @@
 		E4FABD512A9C41B300C93EA8 /* HWMTimers */ = {
 			isa = PBXGroup;
 			children = (
+				E453767A2AA0484000BFA32C /* Settings */,
+				E45376772AA0123E00BFA32C /* Shapes */,
+				E4FABD922A9D9D3F00C93EA8 /* Extensions */,
+				E4FABD892A9D80F600C93EA8 /* Views */,
+				E4FABD7C2A9C4BBA00C93EA8 /* Model */,
 				E4FABD522A9C41B300C93EA8 /* HWMTimersApp.swift */,
 				E4FABD542A9C41B300C93EA8 /* ContentView.swift */,
 				E4FABD562A9C41B300C93EA8 /* Assets.xcassets */,
+				E4FABD8F2A9D9B2F00C93EA8 /* Michroma-Regular.ttf */,
+				E4FABD912A9D9CEA00C93EA8 /* Info.plist */,
 				E4FABD582A9C41B300C93EA8 /* Preview Content */,
 			);
 			path = HWMTimers;
@@ -113,6 +177,7 @@
 		E4FABD622A9C41B300C93EA8 /* HWMTimersTests */ = {
 			isa = PBXGroup;
 			children = (
+				E4FABD862A9D56AC00C93EA8 /* Model */,
 				E4FABD632A9C41B300C93EA8 /* HWMTimersTests.swift */,
 			);
 			path = HWMTimersTests;
@@ -125,6 +190,43 @@
 				E4FABD6F2A9C41B400C93EA8 /* HWMTimersUITestsLaunchTests.swift */,
 			);
 			path = HWMTimersUITests;
+			sourceTree = "<group>";
+		};
+		E4FABD7C2A9C4BBA00C93EA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4FABD7D2A9C4BE600C93EA8 /* AGTimers.swift */,
+				E4FABD8C2A9D823700C93EA8 /* AGAssignmentViewModel.swift */,
+				E453767D2AA04B9B00BFA32C /* TimerNotificationService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4FABD862A9D56AC00C93EA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4FABD872A9D56C200C93EA8 /* TimerTests.swift */,
+				E4EC3E352AA68E72003B0E3B /* TimersTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4FABD892A9D80F600C93EA8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4FABD8A2A9D810400C93EA8 /* AssignmentView.swift */,
+				E453767F2AA53B4D00BFA32C /* GrantNotifications */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E4FABD922A9D9D3F00C93EA8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E4FABD932A9D9D4D00C93EA8 /* HWMTimerTheme.swift */,
+				E45376842AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +245,9 @@
 			dependencies = (
 			);
 			name = HWMTimers;
+			packageProductDependencies = (
+				E4FABD842A9D47F900C93EA8 /* NiceNotifications */,
+			);
 			productName = HWMTimers;
 			productReference = E4FABD4F2A9C41B300C93EA8 /* HWMTimers.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +320,9 @@
 				Base,
 			);
 			mainGroup = E4FABD462A9C41B300C93EA8;
+			packageReferences = (
+				E4FABD832A9D47F900C93EA8 /* XCRemoteSwiftPackageReference "NiceNotifications" */,
+			);
 			productRefGroup = E4FABD502A9C41B300C93EA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4FABD5A2A9C41B300C93EA8 /* Preview Assets.xcassets in Resources */,
+				E4FABD902A9D9B2F00C93EA8 /* Michroma-Regular.ttf in Resources */,
 				E4FABD572A9C41B300C93EA8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +368,17 @@
 			files = (
 				E4FABD552A9C41B300C93EA8 /* ContentView.swift in Sources */,
 				E4FABD532A9C41B300C93EA8 /* HWMTimersApp.swift in Sources */,
+				E45376832AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift in Sources */,
+				E453767E2AA04B9B00BFA32C /* TimerNotificationService.swift in Sources */,
+				E4FABD8B2A9D810400C93EA8 /* AssignmentView.swift in Sources */,
+				E453767C2AA0485700BFA32C /* SettingsView.swift in Sources */,
+				E45376852AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift in Sources */,
+				E45376792AA0127900BFA32C /* BevelledCorner.swift in Sources */,
+				E45376812AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift in Sources */,
+				E4FABD942A9D9D4D00C93EA8 /* HWMTimerTheme.swift in Sources */,
+				E4FABD7E2A9C4BE600C93EA8 /* AGTimers.swift in Sources */,
+				E4FABD8D2A9D823700C93EA8 /* AGAssignmentViewModel.swift in Sources */,
+				E4FABD822A9C510600C93EA8 /* Star.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +387,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4FABD642A9C41B300C93EA8 /* HWMTimersTests.swift in Sources */,
+				E4EC3E362AA68E72003B0E3B /* TimersTests.swift in Sources */,
+				E4FABD882A9D56C200C93EA8 /* TimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,11 +542,13 @@
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HWMTimers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Timers;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,9 +556,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antokne.HWMTimers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,11 +576,13 @@
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HWMTimers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Timers;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,9 +590,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antokne.HWMTimers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -583,6 +715,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E4FABD832A9D47F900C93EA8 /* XCRemoteSwiftPackageReference "NiceNotifications" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dreymonde/NiceNotifications";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E4FABD842A9D47F900C93EA8 /* NiceNotifications */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4FABD832A9D47F900C93EA8 /* XCRemoteSwiftPackageReference "NiceNotifications" */;
+			productName = NiceNotifications;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4FABD472A9C41B300C93EA8 /* Project object */;
 }
