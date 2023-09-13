@@ -13,7 +13,9 @@ struct SettingsView: View {
 	var body: some View {
 		NavigationStack {
 			List {
+				Text("Thanks to Homeworld Mobile Team")
 				HStack {
+					
 					Image("hwm20")
 //						.renderingMode(.template)
 //						.foregroundColor(.accentColor)
@@ -38,6 +40,8 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
-		SettingsView()
+		NavigationStack {
+			SettingsView()
+		}
 	}
 }
