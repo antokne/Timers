@@ -34,6 +34,7 @@ struct SimpleGrantNotificationAccessView: View {
 							.foregroundColor(textForegroundColour)
 						Spacer()
 					}
+					#if os(iOS) || os(macOS)
 					HStack {
 						Link("Open Settings", destination: URL(string: UIApplication.openSettingsURLString)!)
 						Spacer()
@@ -44,6 +45,7 @@ struct SimpleGrantNotificationAccessView: View {
 						}
 						.buttonStyle(.borderless)
 					}
+					#endif
 				}
 			}
 		} footer: {
@@ -52,9 +54,11 @@ struct SimpleGrantNotificationAccessView: View {
 					.foregroundColor(textForegroundFooterColour)
 			}
 		}
+		#if os(iOS) || os(macOS)
 		.willEnterForeground {
 			viewModel.updateNotificationState()
 		}
+		#endif
 	}
 	
 }

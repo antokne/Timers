@@ -8,10 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
-import NiceNotifications
-
-
-
+import UserNotifications
 
 
 enum GrantAccessNotificationState {
@@ -48,27 +45,35 @@ class SimpleGrantAccessViewModel: ObservableObject {
 			return
 		}
 		
-		LocalNotifications.SystemAuthorization.getCurrent { status in
+		let localNotifications = UNUserNotificationCenter.current()
+		localNotifications.getNotificationSettings { setting in
 			Task { @MainActor [weak self] in
-				switch status {
-				case .allowed:
+				switch setting.authorizationStatus {
+				case .notDetermined:
+					self?.showNoticiationState = .notEnabled
+				case .denied:
+					self?.showNoticiationState = .denied
+				case .authorized:
 					self?.showNoticiationState = .ok
-				case .deniedNow:
-					self?.showNoticiationState = .denied
-				case .deniedPreviously:
-					self?.showNoticiationState = .denied
-				case .undetermined:
+				case .provisional:
+					self?.showNoticiationState = .ok
+				case .ephemeral:
+					self?.showNoticiationState = .ok
+				@unknown default:
 					self?.showNoticiationState = .notEnabled
 				}
 			}
 		}
+		
+
 	}
 	
 	// MARK: - start nAuth
 	
 	func authNotifications() {
-		LocalNotifications.requestPermission(strategy: .askSystemPermissionIfNeeded) { [weak self] success in
-			self?.updateNotificationState()
+		let localNotifications = UNUserNotificationCenter.current()
+		localNotifications.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+			self.updateNotificationState()
 		}
 	}
 	

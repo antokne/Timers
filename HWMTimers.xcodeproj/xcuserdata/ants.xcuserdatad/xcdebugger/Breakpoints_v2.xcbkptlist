@@ -87,22 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7488018B-9BE7-4074-9C86-61D72E062D80"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HWMTimers/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2D94F3D2-FE4B-4608-B572-F84204FE4B0A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -304,6 +288,435 @@
             endingLineNumber = "33"
             landmarkName = "testDirectory()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61BD9673-5B2A-408B-BCCF-142C98C61A93"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers Watch Watch App/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "17378910-B005-4AD5-B0FF-ADD9EEA52BC1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers Watch Watch App/WatchContentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "update(timer:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "17378910-B005-4AD5-B0FF-ADD9EEA52BC1 - 234b1c3ba881f90f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimers_Watch_App.WatchContentViewModel.update(timer: HWMTimers_Watch_App.AGTimer) -&gt; ()"
+                  moduleName = "HWMTimers Watch App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "17378910-B005-4AD5-B0FF-ADD9EEA52BC1 - 234b1c3ba881f90f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimers_Watch_App.WatchContentViewModel.update(timer: HWMTimers_Watch_App.AGTimer) -&gt; ()"
+                  moduleName = "HWMTimers Watch App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E35A67C-B00A-4013-A856-4F7534F6C3DC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers Watch Watch App/WatchContentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "timerAction()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2E35A67C-B00A-4013-A856-4F7534F6C3DC - 234b1c3ba881f8c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimers_Watch_App.WatchContentViewModel.update(timer: HWMTimers_Watch_App.AGTimer) -&gt; ()"
+                  moduleName = "HWMTimers Watch App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "2E35A67C-B00A-4013-A856-4F7534F6C3DC - d9e416dc742a5f0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimers_Watch_App.WatchContentViewModel.timerAction() -&gt; ()"
+                  moduleName = "HWMTimers Watch App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "576">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7BBBBF41-E327-48DB-B9AA-A996F4B99B0C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers Watch Watch App/WatchContentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "configureNotification()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FDDD41C-6E3D-404A-A2DF-48A273337EA8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers/Views/GrantNotifications/SimpleGrantNotificationAccessView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "8FDDD41C-6E3D-404A-A2DF-48A273337EA8 - 95c66d00df35fca7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in HWMTimers.SimpleGrantNotificationAccessView.body.getter : some"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers/Views/GrantNotifications/SimpleGrantNotificationAccessView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "8FDDD41C-6E3D-404A-A2DF-48A273337EA8 - fa5f197b5da7e1dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimers.SimpleGrantNotificationAccessView.body.getter : some"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers/Views/GrantNotifications/SimpleGrantNotificationAccessView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "592">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2B29AAA-759E-4837-B823-140BC9DA72A5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers Watch App/WatchContentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "checkCurrentNotifications()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F2B29AAA-759E-4837-B823-140BC9DA72A5 - 3995090011e00455"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for HWMTimers.WatchContentViewModel.checkCurrentNotifications() async -&gt; ()"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "214"
+                  endingLineNumber = "214"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "F2B29AAA-759E-4837-B823-140BC9DA72A5 - cbb3a0c8151462e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (HWMTimers.AGTimer) -&gt; Swift.Bool in HWMTimers.WatchContentViewModel.checkCurrentNotifications() async -&gt; ()"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "214"
+                  endingLineNumber = "214"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7562DAE-9030-48E9-B22D-4E952E2457EE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers Watch App/WatchContentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "configureTimer(whith:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A7562DAE-9030-48E9-B22D-4E952E2457EE - 764f1a2ebaa342a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimers.AGTimer.configureTimer(whith: __C.UNNotificationRequest) -&gt; Swift.Bool"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "836">
+               </Location>
+               <Location
+                  uuid = "A7562DAE-9030-48E9-B22D-4E952E2457EE - 764f1a2ebaa342a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimers.AGTimer.configureTimer(whith: __C.UNNotificationRequest) -&gt; Swift.Bool"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "892">
+               </Location>
+               <Location
+                  uuid = "A7562DAE-9030-48E9-B22D-4E952E2457EE - 764f1a2ebaa34544"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimers.AGTimer.configureTimer(whith: __C.UNNotificationRequest) -&gt; Swift.Bool"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "768">
+               </Location>
+               <Location
+                  uuid = "A7562DAE-9030-48E9-B22D-4E952E2457EE - 764f1a2ebaa34544"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimers.AGTimer.configureTimer(whith: __C.UNNotificationRequest) -&gt; Swift.Bool"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "820">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C662B00-DFBB-42FD-A324-AB23985B7E52"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers Watch App/WatchContentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "configureNotification(startDate:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6C662B00-DFBB-42FD-A324-AB23985B7E52 - db6d9b57498bfd47"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #2 @Sendable () async -&gt; () in HWMTimers.AGTimer.configureNotification() -&gt; ()"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "6C662B00-DFBB-42FD-A324-AB23985B7E52 - 3d6b1082d700aa74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #2 @Sendable () async -&gt; () in HWMTimers.AGTimer.configureNotification() -&gt; ()"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "6C662B00-DFBB-42FD-A324-AB23985B7E52 - dc3f767bb2553966"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #2 @Sendable () async -&gt; () in HWMTimers.AGTimer.configureNotification() -&gt; ()"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "301E5B11-0C27-4E87-9A60-E3F100D2C3F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers Watch App/WatchContentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "checkCurrentNotifications()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "301E5B11-0C27-4E87-9A60-E3F100D2C3F8 - 3995090011e00bb4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for HWMTimers.WatchContentViewModel.checkCurrentNotifications() async -&gt; ()"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "301E5B11-0C27-4E87-9A60-E3F100D2C3F8 - 3995090011e00bb4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for HWMTimers.WatchContentViewModel.checkCurrentNotifications() async -&gt; ()"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers%20Watch%20App/WatchContentViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "304">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "488BB10A-2B1F-4993-A98A-EF9BD5D3502A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers Watch App/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -7,52 +7,9 @@
 
 import SwiftUI
 
-struct SimpleStar: Hashable, Equatable {
-	var x: Double
-	var removalDate: Date
-	var speed: Double
-	var color: Color
-	var size : Double
-	var points: Int
-}
-
-class StarGenerator: ObservableObject {
-	var stars = Set<SimpleStar>()
-	
-	var lastIntTime = 0
-
-	func update(to date: Date) {
-		
-		if Int(date.timeIntervalSince1970) == lastIntTime {
-			return
-		}
-
-		lastIntTime = Int(date.timeIntervalSince1970)
-
-		stars = stars.filter { $0.removalDate > date }
-		stars.insert(SimpleStar(x: Double.random(in: 0...1),
-								removalDate: date + time,
-								speed: Double.random(in: 0.01...0.02),
-								color: color,
-								size: Double.random(in: 5...10),
-								points: Int.random(in: 4...8)))
-	}
-					 
-	var time: TimeInterval {
-		Double.random(in: 50...55)
-	}
-	
-	var color: Color {
-		Color(red: Double.random(in: 0.5...1.0),
-			  green: Double.random(in: 0.1...0.8),
-			  blue: Double.random(in: 0.5...1.0))
-	}
-}
-
 struct ContentView: View {
 	
-	@StateObject private var starsGenerator = StarGenerator()
-	@ObservedObject var grantAccessViewModel: SimpleGrantAccessViewModel = SimpleGrantAccessViewModel()
+	@StateObject var grantAccessViewModel: SimpleGrantAccessViewModel = SimpleGrantAccessViewModel()
 
 	@StateObject var assignmentViewModel: AGAssignmentViewModel
 	
@@ -67,8 +24,8 @@ struct ContentView: View {
 					.renderingMode(.template)
 					.resizable()
 					.aspectRatio(contentMode: .fit)
-					.foregroundColor(Color(white: 0.2))
-					.blur(radius: 3)
+					.foregroundColor(Color(white: 0.15))
+					.blur(radius: 1)
 
 				VStack {
 					HStack(alignment: .center) {
@@ -79,32 +36,7 @@ struct ContentView: View {
 					Spacer()
 				}
 				
-				TimelineView(.animation) { timeline in
-					Canvas { context, size in
-						
-						let topLeft = BevelledCorner(corner: .topLeft).path(in: CGRect(x: 22, y: geometry.safeAreaInsets.top, width: 20, height: 20))
-						context.fill(topLeft, with: .color(.homeworld.blue))
-						
-						let topRight = BevelledCorner(corner: .topRight).path(in: CGRect(x: size.width - 42, y: geometry.safeAreaInsets.top, width: 20, height: 20))
-						context.fill(topRight, with: .color(.homeworld.blue))
-						
-						// _ = print(Int(timeline.date.timeIntervalSince1970))
-						
-						starsGenerator.update(to: timeline.date)
-						
-						for star in starsGenerator.stars {
-							let age = timeline.date.distance(to: star.removalDate)
-							let rect = CGRect(x: star.x * size.width, y: size.height - (size.height * age * star.speed), width: star.size, height: star.size)
-							//						let shape = Circle().path(in: rect)
-							
-							let shape = Star(corners: star.points, smoothness: 0.1).path(in: rect)
-							
-							context.fill(shape, with: .color(star.color))
-						}
-						
-					}
-				}
-				.ignoresSafeArea()
+				TheStarsLikeDustView()
 				
 				VStack {
 
@@ -136,7 +68,7 @@ struct ContentView: View {
 					}
 				}
 			}
-			.background(.black)
+			.background(Color.homeworld.background)
 		}
 	}
 }
