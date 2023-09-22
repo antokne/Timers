@@ -35,7 +35,7 @@
 		E4D2C40C2AB2BBE9005FD6F4 /* HWMTimers_Watch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C40B2AB2BBE9005FD6F4 /* HWMTimers_Watch_Watch_AppTests.swift */; };
 		E4D2C4162AB2BBE9005FD6F4 /* HWMTimers_Watch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C4152AB2BBE9005FD6F4 /* HWMTimers_Watch_Watch_AppUITests.swift */; };
 		E4D2C4182AB2BBE9005FD6F4 /* HWMTimers_Watch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C4172AB2BBE9005FD6F4 /* HWMTimers_Watch_Watch_AppUITestsLaunchTests.swift */; };
-		E4D2C41B2AB2BBE9005FD6F4 /* HWMTimers.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E4D2C3F82AB2BBE8005FD6F4 /* HWMTimers.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E4D2C41B2AB2BBE9005FD6F4 /* HWMTimersWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E4D2C3F82AB2BBE8005FD6F4 /* HWMTimersWatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E4EC3E362AA68E72003B0E3B /* TimersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC3E352AA68E72003B0E3B /* TimersTests.swift */; };
 		E4FABD532A9C41B300C93EA8 /* HWMTimersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD522A9C41B300C93EA8 /* HWMTimersApp.swift */; };
 		E4FABD552A9C41B300C93EA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD542A9C41B300C93EA8 /* ContentView.swift */; };
@@ -98,7 +98,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				E4D2C41B2AB2BBE9005FD6F4 /* HWMTimers.app in Embed Watch Content */,
+				E4D2C41B2AB2BBE9005FD6F4 /* HWMTimersWatchApp.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,7 +119,7 @@
 		E48EF9462AB80A9E0086B159 /* HWMTimers Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HWMTimers Watch App.entitlements"; sourceTree = "<group>"; };
 		E4A63F352AB3FA4F005B47CB /* RemoteMining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteMining.swift; sourceTree = "<group>"; };
 		E4AD0D602AB7CEE7003FD5BC /* WatchContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchContentViewModel.swift; sourceTree = "<group>"; };
-		E4D2C3F82AB2BBE8005FD6F4 /* HWMTimers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWMTimers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4D2C3F82AB2BBE8005FD6F4 /* HWMTimersWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWMTimersWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2C3FA2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimers_WatchApp.swift; sourceTree = "<group>"; };
 		E4D2C3FC2AB2BBE8005FD6F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4D2C3FE2AB2BBE9005FD6F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,6 +130,7 @@
 		E4D2C4152AB2BBE9005FD6F4 /* HWMTimers_Watch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimers_Watch_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		E4D2C4172AB2BBE9005FD6F4 /* HWMTimers_Watch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimers_Watch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E4EC3E352AA68E72003B0E3B /* TimersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersTests.swift; sourceTree = "<group>"; };
+		E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		E4FABD4F2A9C41B300C93EA8 /* HWMTimers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWMTimers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FABD522A9C41B300C93EA8 /* HWMTimersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimersApp.swift; sourceTree = "<group>"; };
 		E4FABD542A9C41B300C93EA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -266,6 +267,7 @@
 		E4FABD462A9C41B300C93EA8 = {
 			isa = PBXGroup;
 			children = (
+				E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */,
 				E48EF9462AB80A9E0086B159 /* HWMTimers Watch App.entitlements */,
 				E4FABD512A9C41B300C93EA8 /* HWMTimers */,
 				E4FABD622A9C41B300C93EA8 /* HWMTimersTests */,
@@ -283,7 +285,7 @@
 				E4FABD4F2A9C41B300C93EA8 /* HWMTimers.app */,
 				E4FABD5F2A9C41B300C93EA8 /* HWMTimersTests.xctest */,
 				E4FABD692A9C41B400C93EA8 /* HWMTimersUITests.xctest */,
-				E4D2C3F82AB2BBE8005FD6F4 /* HWMTimers.app */,
+				E4D2C3F82AB2BBE8005FD6F4 /* HWMTimersWatchApp.app */,
 				E4D2C4072AB2BBE9005FD6F4 /* HWMTimers Watch AppTests.xctest */,
 				E4D2C4112AB2BBE9005FD6F4 /* HWMTimers Watch AppUITests.xctest */,
 			);
@@ -390,7 +392,7 @@
 			);
 			name = "HWMTimers Watch App";
 			productName = "HWMTimers Watch Watch App";
-			productReference = E4D2C3F82AB2BBE8005FD6F4 /* HWMTimers.app */;
+			productReference = E4D2C3F82AB2BBE8005FD6F4 /* HWMTimersWatchApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E4D2C4062AB2BBE9005FD6F4 /* HWMTimers Watch AppTests */ = {
@@ -710,17 +712,18 @@
 /* Begin XCBuildConfiguration section */
 		E4D2C41D2AB2BBE9005FD6F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "HWMTimers Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"HWMTimers Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HWMTimers-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "HWM Timers";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.antokne.HWMTimers;
@@ -728,9 +731,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antokne.HWMTimers.watchkitapp;
-				PRODUCT_NAME = HWMTimers;
+				PRODUCT_NAME = HWMTimersWatchApp;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -742,17 +744,18 @@
 		};
 		E4D2C41E2AB2BBE9005FD6F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "HWMTimers Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"HWMTimers Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HWMTimers-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "HWM Timers";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.antokne.HWMTimers;
@@ -760,9 +763,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antokne.HWMTimers.watchkitapp;
-				PRODUCT_NAME = HWMTimers;
+				PRODUCT_NAME = HWMTimersWatchApp;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -774,14 +776,13 @@
 		};
 		E4D2C41F2AB2BBE9005FD6F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antokne.HWMTimers-Watch-Watch-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -795,14 +796,13 @@
 		};
 		E4D2C4202AB2BBE9005FD6F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antokne.HWMTimers-Watch-Watch-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -816,13 +816,12 @@
 		};
 		E4D2C4212AB2BBE9005FD6F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antokne.HWMTimers-Watch-Watch-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -836,13 +835,12 @@
 		};
 		E4D2C4222AB2BBE9005FD6F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antokne.HWMTimers-Watch-Watch-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -856,6 +854,7 @@
 		};
 		E4FABD712A9C41B400C93EA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -916,6 +915,7 @@
 		};
 		E4FABD722A9C41B400C93EA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -970,18 +970,19 @@
 		};
 		E4FABD742A9C41B400C93EA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"HWMTimers/Preview Content\"";
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HWMTimers/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Timers;
+				INFOPLIST_KEY_CFBundleDisplayName = "HWM Timers";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -991,7 +992,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antokne.HWMTimers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1005,18 +1005,19 @@
 		};
 		E4FABD752A9C41B400C93EA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"HWMTimers/Preview Content\"";
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HWMTimers/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Timers;
+				INFOPLIST_KEY_CFBundleDisplayName = "HWM Timers";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1026,7 +1027,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antokne.HWMTimers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1040,15 +1040,14 @@
 		};
 		E4FABD772A9C41B400C93EA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antokne.HWMTimersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -1060,15 +1059,14 @@
 		};
 		E4FABD782A9C41B400C93EA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antokne.HWMTimersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -1080,13 +1078,12 @@
 		};
 		E4FABD7A2A9C41B400C93EA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antokne.HWMTimersUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -1098,13 +1095,12 @@
 		};
 		E4FABD7B2A9C41B400C93EA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antokne.HWMTimersUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;

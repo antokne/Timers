@@ -72,7 +72,7 @@ struct ContentView: View {
 				TheStarsLikeDustView()
 			}
 		}
-		.navigationTitle("Timers 1.0 (7)")
+		.navigationTitle("TIMERS 1.0 (8)")
 		.task {
 			await viewModel.checkCurrentNotifications()
 		}

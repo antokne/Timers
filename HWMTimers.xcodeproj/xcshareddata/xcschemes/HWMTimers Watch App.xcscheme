@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4D2C3F72AB2BBE8005FD6F4"
-               BuildableName = "HWMTimers.app"
+               BuildableName = "HWMTimersWatchApp.app"
                BlueprintName = "HWMTimers Watch App"
                ReferencedContainer = "container:HWMTimers.xcodeproj">
             </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4D2C3F72AB2BBE8005FD6F4"
-            BuildableName = "HWMTimers.app"
+            BuildableName = "HWMTimersWatchApp.app"
             BlueprintName = "HWMTimers Watch App"
             ReferencedContainer = "container:HWMTimers.xcodeproj">
          </BuildableReference>
@@ -99,7 +99,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4D2C3F72AB2BBE8005FD6F4"
-            BuildableName = "HWMTimers.app"
+            BuildableName = "HWMTimersWatchApp.app"
             BlueprintName = "HWMTimers Watch App"
             ReferencedContainer = "container:HWMTimers.xcodeproj">
          </BuildableReference>
