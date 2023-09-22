@@ -719,7 +719,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HWMTimers Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HWMTimers-Watch-App-Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.antokne.HWMTimers;
@@ -750,7 +750,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HWMTimers Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HWMTimers-Watch-App-Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.antokne.HWMTimers;
