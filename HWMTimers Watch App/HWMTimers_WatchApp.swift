@@ -8,12 +8,16 @@
 import SwiftUI
 
 @main
-struct HWMTimers_Watch_Watch_AppApp: App {
+struct HWMTimers_WatchApp: App {
 		
+	@StateObject var watchSyncManager = WatchSyncManager()
+
 	var body: some Scene {
 		WindowGroup {
 			NavigationStack {
 				ContentView()
+					.environmentObject(watchSyncManager)
+					.edgesIgnoringSafeArea(.all)
 			}
 		}
 	}

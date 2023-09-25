@@ -20,6 +20,12 @@
 		E45376812AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376802AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift */; };
 		E45376832AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376822AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift */; };
 		E45376852AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376842AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift */; };
+		E47F56642AC0F7F200C55597 /* BevelledCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376782AA0127900BFA32C /* BevelledCorner.swift */; };
+		E47F56662AC1014500C55597 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F56652AC1014500C55597 /* SettingsViewModel.swift */; };
+		E47F56692AC106C600C55597 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F56682AC106C600C55597 /* Constants.swift */; };
+		E47F566A2AC106D000C55597 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F56682AC106C600C55597 /* Constants.swift */; };
+		E47F566C2AC1114900C55597 /* WatchSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F566B2AC1114900C55597 /* WatchSyncManager.swift */; };
+		E47F566D2AC1114900C55597 /* WatchSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F566B2AC1114900C55597 /* WatchSyncManager.swift */; };
 		E48EF9492AB817720086B159 /* SimpleGrantNotificationAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376802AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift */; };
 		E48EF94A2AB817720086B159 /* SimpleGrantAccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376822AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift */; };
 		E4A63F342AB2C8B1005B47CB /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD812A9C510600C93EA8 /* Star.swift */; };
@@ -116,6 +122,9 @@
 		E45376802AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGrantNotificationAccessView.swift; sourceTree = "<group>"; };
 		E45376822AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGrantAccessViewModel.swift; sourceTree = "<group>"; };
 		E45376842AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WillEnterForegroundEventModifier.swift; sourceTree = "<group>"; };
+		E47F56652AC1014500C55597 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		E47F56682AC106C600C55597 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E47F566B2AC1114900C55597 /* WatchSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncManager.swift; sourceTree = "<group>"; };
 		E48EF9462AB80A9E0086B159 /* HWMTimers Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HWMTimers Watch App.entitlements"; sourceTree = "<group>"; };
 		E4A63F352AB3FA4F005B47CB /* RemoteMining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteMining.swift; sourceTree = "<group>"; };
 		E4AD0D602AB7CEE7003FD5BC /* WatchContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchContentViewModel.swift; sourceTree = "<group>"; };
@@ -213,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				E453767B2AA0485700BFA32C /* SettingsView.swift */,
+				E47F56652AC1014500C55597 /* SettingsViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -224,6 +234,15 @@
 				E45376802AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift */,
 			);
 			path = GrantNotifications;
+			sourceTree = "<group>";
+		};
+		E47F56672AC106BA00C55597 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E47F56682AC106C600C55597 /* Constants.swift */,
+				E47F566B2AC1114900C55597 /* WatchSyncManager.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		E4D2C3F92AB2BBE8005FD6F4 /* HWMTimers Watch App */ = {
@@ -295,6 +314,7 @@
 		E4FABD512A9C41B300C93EA8 /* HWMTimers */ = {
 			isa = PBXGroup;
 			children = (
+				E47F56672AC106BA00C55597 /* Shared */,
 				E453767A2AA0484000BFA32C /* Settings */,
 				E45376772AA0123E00BFA32C /* Shapes */,
 				E4FABD922A9D9D3F00C93EA8 /* Extensions */,
@@ -608,10 +628,13 @@
 				E4A63F342AB2C8B1005B47CB /* Star.swift in Sources */,
 				E4080D902ABCF09100601A37 /* TheStarsLikeDustView.swift in Sources */,
 				E4D2C3FD2AB2BBE8005FD6F4 /* ContentView.swift in Sources */,
+				E47F56642AC0F7F200C55597 /* BevelledCorner.swift in Sources */,
 				E4080D8F2ABCF08D00601A37 /* StarsModel.swift in Sources */,
 				E48EF9492AB817720086B159 /* SimpleGrantNotificationAccessView.swift in Sources */,
 				E4AD0D662AB7E6BA003FD5BC /* HWMTimerTheme.swift in Sources */,
+				E47F566A2AC106D000C55597 /* Constants.swift in Sources */,
 				E4080D932ABCFB0800601A37 /* Research.swift in Sources */,
+				E47F566D2AC1114900C55597 /* WatchSyncManager.swift in Sources */,
 				E4D2C3FB2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift in Sources */,
 				E4AD0D612AB7CEE7003FD5BC /* WatchContentViewModel.swift in Sources */,
 				E48EF94A2AB817720086B159 /* SimpleGrantAccessViewModel.swift in Sources */,
@@ -641,9 +664,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4FABD552A9C41B300C93EA8 /* ContentView.swift in Sources */,
+				E47F56692AC106C600C55597 /* Constants.swift in Sources */,
 				E4FABD532A9C41B300C93EA8 /* HWMTimersApp.swift in Sources */,
 				E45376832AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift in Sources */,
 				E453767E2AA04B9B00BFA32C /* TimerNotificationService.swift in Sources */,
+				E47F566C2AC1114900C55597 /* WatchSyncManager.swift in Sources */,
 				E4FABD8B2A9D810400C93EA8 /* AssignmentView.swift in Sources */,
 				E453767C2AA0485700BFA32C /* SettingsView.swift in Sources */,
 				E45376852AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift in Sources */,
@@ -657,6 +682,7 @@
 				E4A63F362AB3FA4F005B47CB /* RemoteMining.swift in Sources */,
 				E4FABD8D2A9D823700C93EA8 /* AGAssignmentViewModel.swift in Sources */,
 				E4FABD822A9C510600C93EA8 /* Star.swift in Sources */,
+				E47F56662AC1014500C55597 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

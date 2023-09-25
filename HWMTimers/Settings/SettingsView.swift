@@ -10,23 +10,56 @@ import SwiftUI
 struct SettingsView: View {
 	@Environment(\.presentationMode) var presentationMode
 
+	@EnvironmentObject private var watchSyncManager: WatchSyncManager
+
+	@StateObject var viewModel: SettingsViewModel = SettingsViewModel()
+	
+	
 	var body: some View {
 		NavigationStack {
 			List {
-				Text("Thanks to Homeworld Mobile Team")
-				HStack {
+				Section {
+					Stepper(value: $viewModel.researchPercentBonus, in:  0...100) {
+						HStack {
+							ResearchView(forgroundColor: .accentColor)
+								.frame(width: 20)
+							Text("Research \(viewModel.researchPercentBonus)%")
+						}
+					}
+					.onChange(of: viewModel.researchPercentBonus) { newValue in
+						researchPercentBonusChanged()
+					}
 					
-					Image("hwm20")
-//						.renderingMode(.template)
-//						.foregroundColor(.accentColor)
-//						.frame(width: 50, height: 50)
-//						.overlay(
-//							RoundedRectangle(cornerRadius: 2)
-//								.background(.clear)
-//						)
-					Link("Homeworld Mobile", destination: URL(string: "https://www.homeworldmobile.com")!)
+				} header: {
+					Text("Adjust bonus %")
+				}
+				
+				Section {
+					
+					HStack {
+						Image("hwm20")
+							.cornerRadius(5)
+						Link("Homeworld Mobile", destination: URL(string: "https://www.homeworldmobile.com")!)
+					}
+					HStack {
+						Image("hwm20")
+							.cornerRadius(5)
+						Link("Homeworld Mobile Discord", destination: URL(string: "https://discord.gg/zT4gnC8a")!)
+
+					}
+				} header: {
+					Text("Homeworld")
+				} footer: {
+					Text("Thanks to Homeworld Mobile Team")
+				}
+				
+				Section {
+					Text("Contact @antokne on Homeworld Mobile Discord.")
+				} header: {
+					Text("Support")
 				}
 			}
+			.font(.homeworld.body)
 		}
 		.navigationTitle("Settings")
 		.toolbar {
@@ -35,6 +68,15 @@ struct SettingsView: View {
 			}
 		}
 		.navigationBarTitleDisplayMode(.inline)
+	}
+	
+	func researchPercentBonusChanged() {
+		do {
+			try watchSyncManager.updateApplicationContext([SettingsResearchPercentBonusKey: viewModel.researchPercentBonus])
+		}
+		catch {
+			
+		}
 	}
 }
 

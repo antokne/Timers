@@ -100,6 +100,8 @@ struct RemoteMining_Previews: PreviewProvider {
 	static var previews: some View {
 		VStack {
 			RemoteMiningView(forgroundColor: .blue)
+				.frame(width: 50, height: 50)
+				.background(.green)
 			Text("Hello")
 				.foregroundColor(.white)
 		}

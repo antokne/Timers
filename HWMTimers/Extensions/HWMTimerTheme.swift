@@ -14,6 +14,7 @@ extension Font {
 		static var title: Font = Font.custom("Michroma-Regular", size: 25, relativeTo: .title)
 		static var title2: Font = Font.custom("Michroma-Regular", size: 18, relativeTo: .title2)
 		static var title3: Font = Font.custom("Michroma-Regular", size: 15, relativeTo: .title2)
+		static var body: Font = Font.custom("Michroma-Regular", size: 13, relativeTo: .body)
 		static var subheadline: Font = Font.custom("Michroma-Regular", size: 12, relativeTo: .subheadline)
 	}
 	
