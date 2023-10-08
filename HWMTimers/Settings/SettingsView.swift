@@ -39,12 +39,12 @@ struct SettingsView: View {
 					HStack {
 						Image("hwm20")
 							.cornerRadius(5)
-						Link("Homeworld Mobile", destination: URL(string: "https://www.homeworldmobile.com")!)
+						Link("Homeworld Mobile Website", destination: URL(string: "https://www.homeworldmobile.com")!)
 					}
 					HStack {
 						Image("hwm20")
 							.cornerRadius(5)
-						Link("Homeworld Mobile Discord", destination: URL(string: "https://discord.gg/zT4gnC8a")!)
+						Link("Homeworld Mobile Discord", destination: URL(string: "https://discord.gg/homeworldmobile")!)
 
 					}
 				} header: {
