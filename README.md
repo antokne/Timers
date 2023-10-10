@@ -20,3 +20,5 @@ Currently supports:
 Also supports two timers:
 * Remote mining - currently just 4 hrs
 * Research - including a % bonus configured in settings.
+
+Timers are supported on phone app and watch.
