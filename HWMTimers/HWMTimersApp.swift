@@ -16,7 +16,7 @@ struct HWMTimersApp: App {
 	
 	var body: some Scene {
 		WindowGroup {
-			ContentView(assignmentViewModel: AGAssignmentViewModel(timerService: timerNotificationService))
+			ContentView(assignmentViewModel: AGAssignmentViewModel(timerService: timerNotificationService), timersViewModel: TimersViewModel())
 				.environmentObject(timerNotificationService)
 				.environmentObject(watchSyncManager)
 		}

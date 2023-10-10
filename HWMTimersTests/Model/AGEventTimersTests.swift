@@ -1,5 +1,5 @@
 //
-//  TimersTests.swift
+//  AGEventTimersTests.swift
 //  HWMTimersTests
 //
 //  Created by Ant Gardiner on 5/09/23.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import HWMTimers
 
-final class TimersTests: XCTestCase {
+final class AGEventTimersTests: XCTestCase {
 	
 	override func setUpWithError() throws {
 	}
@@ -18,7 +18,7 @@ final class TimersTests: XCTestCase {
 	
 	func testDefaults() throws {
 		
-		let timers = AGTimers()
+		let timers = AGEventTimers()
 		
 		let defaultTimers = timers.defaultTimers
 		
@@ -27,7 +27,7 @@ final class TimersTests: XCTestCase {
 
 	func testDirectory() throws {
 		
-		let timers = AGTimers()
+		let timers = AGEventTimers()
 		XCTAssertTrue(timers.filePath.pathExtension == "json")
 		XCTAssertTrue(timers.filePath.lastPathComponent == "homeworld-mobile-timers.json")
 		XCTAssertTrue(timers.filePath.path().contains("Documents"))
@@ -35,7 +35,7 @@ final class TimersTests: XCTestCase {
 	
 	func testLoadFileEmpty() async throws {
 
-		let timers = AGTimers()
+		let timers = AGEventTimers()
 
 		do {
 			try await timers.loadTimers()
@@ -49,7 +49,7 @@ final class TimersTests: XCTestCase {
 	
 	func testSaveLoadDeleteFileEmpty() async throws {
 		
-		let timers = AGTimers()
+		let timers = AGEventTimers()
 		
 		XCTAssertFalse(FileManager.default.fileExists(atPath: timers.filePath.path()))
 		
@@ -61,7 +61,7 @@ final class TimersTests: XCTestCase {
 			XCTFail("Save failed \(error)")
 		}
 		
-		let loadTimers = AGTimers()
+		let loadTimers = AGEventTimers()
 			
 		do {
 			try await loadTimers.loadTimers()

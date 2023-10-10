@@ -10,7 +10,9 @@ import SwiftUI
 extension Font {
 	
 	struct homeworld {
-		
+		static var titleFixed: Font = Font.custom("Michroma-Regular", fixedSize: 22)
+		static var title3Fixed: Font = Font.custom("Michroma-Regular", fixedSize: 15)
+
 		static var title: Font = Font.custom("Michroma-Regular", size: 25, relativeTo: .title)
 		static var title2: Font = Font.custom("Michroma-Regular", size: 18, relativeTo: .title2)
 		static var title3: Font = Font.custom("Michroma-Regular", size: 15, relativeTo: .title2)

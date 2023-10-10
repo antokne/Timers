@@ -22,6 +22,7 @@ struct SimpleGrantNotificationAccessView: View {
 					Button(action: viewModel.authNotifications) {
 						Text("Authorise Notications")
 							.frame(maxWidth: .infinity)
+							.font(.homeworld.title3)
 					}
 				}
 				.frame(minHeight: 50)
@@ -54,6 +55,7 @@ struct SimpleGrantNotificationAccessView: View {
 					.foregroundColor(textForegroundFooterColour)
 			}
 		}
+		.font(.homeworld.body)
 		#if os(iOS) || os(macOS)
 		.willEnterForeground {
 			viewModel.updateNotificationState()

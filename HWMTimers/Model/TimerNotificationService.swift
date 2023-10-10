@@ -16,7 +16,7 @@ class TimerNotificationService: NSObject, ObservableObject {
 		setNotificationDelegate()
 	}
 	
-	func update(timer: AGTimer) {
+	func update(timer: AGHomeworldMobileEventTimer) {
 		if timer.enabled {
 			setNotification(timer: timer)
 		}
@@ -38,7 +38,7 @@ class TimerNotificationService: NSObject, ObservableObject {
 		UNUserNotificationCenter.current().delegate = self
 	}
 	
-	private func setNotification(timer: AGTimer) {
+	private func setNotification(timer: AGHomeworldMobileEventTimer) {
 		
 		let triggers = timer.type.notificationTriggers(repeats: timer.repeats)
 		
@@ -55,7 +55,7 @@ class TimerNotificationService: NSObject, ObservableObject {
 		}
 	}
 	
-	private func removeNotification(timer: AGTimer) {
+	private func removeNotification(timer: AGHomeworldMobileEventTimer) {
 		LocalNotifications.Env.removePendingNotificationRequests([timer.notificationIdentifier])
 	}
 	

@@ -75,7 +75,7 @@ struct SettingsView: View {
 			try watchSyncManager.updateApplicationContext([SettingsResearchPercentBonusKey: viewModel.researchPercentBonus])
 		}
 		catch {
-			
+			print("updating other application failed: \(error)")
 		}
 	}
 }

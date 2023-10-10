@@ -9,3 +9,4 @@ import Foundation
 
 
 public let SettingsResearchPercentBonusKey = "Settings.researchPercentBonus"
+public let TimerChangedEventKey = "Timer.timerChangedEvent"

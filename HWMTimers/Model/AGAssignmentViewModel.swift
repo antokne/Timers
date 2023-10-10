@@ -6,23 +6,19 @@
 //
 
 import Foundation
-
-
-//struct Assignment: Codable, Identifiable {
-//	var id = UUID()
-//
-//	var enabled = false
-//	var timer: AGTimer
-//
-//}
+import SwiftUI
 
 public class AGAssignmentViewModel: ObservableObject {
 	
-	@Published var assignments: [AGTimer] = []
+	@Published var assignments: [AGHomeworldMobileEventTimer] = []
 	
 	var timerService: TimerNotificationService
 	
-	var timers = AGTimers()
+	var timerEvents = AGEventTimers()
+	
+	@Published var timers: [AGHomeworldMobileTimer] = []
+	@AppStorage(SettingsResearchPercentBonusKey) var researchPercentBonus: Int = 0
+
 	
 	init(timerService: TimerNotificationService) {
 
@@ -30,25 +26,25 @@ public class AGAssignmentViewModel: ObservableObject {
 
 		Task {
 			do {
-				try await timers.loadTimers()
-				assignments = timers.timers
+				try await timerEvents.loadTimers()
+				assignments = timerEvents.timers
 			}
 			catch {
 				print(error)
 
 			}
-			if timers.timers.count == 0 {
-				timers.timers = timers.defaultTimers
+			if timerEvents.timers.count == 0 {
+				timerEvents.timers = timerEvents.defaultTimers
 			}
 			
 			let notificationRequests = await timerService.getCurrentPendingNotifications()
 			
 			for request in notificationRequests {
 				
-				if let timer = timers.timers.first(where: { $0.notificationIdentifier == request.identifier }) {
+				if let timer = timerEvents.timers.first(where: { $0.notificationIdentifier == request.identifier }) {
 					
-					if let index = timers.timers.firstIndex(of: timer) {
-						timers.timers[index].enabled = true
+					if let index = timerEvents.timers.firstIndex(of: timer) {
+						timerEvents.timers[index].enabled = true
 					}
 					
 				}
@@ -58,9 +54,13 @@ public class AGAssignmentViewModel: ObservableObject {
 			print(notificationRequests)
 			
 			Task { @MainActor in
-				self.assignments = timers.timers
+				self.assignments = timerEvents.timers
 			}
 		}
+		
+		timers.append(AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration: 4 * 60 * 60, type: .remoteMining, percentReduction: researchPercentBonus))
+		timers.append(AGHomeworldMobileTimer(title: "Research", running: false, duration: 4 * 60 * 60, type: .research))
+		
 	}
-
+	
 }

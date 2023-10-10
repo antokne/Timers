@@ -1,5 +1,5 @@
 //
-//  TimerTests.swift
+//  AGHomeworldMobileEventTimerTests.swift
 //  HWMTimersTests
 //
 //  Created by Ant Gardiner on 29/08/23.
@@ -10,7 +10,7 @@ import DateBuilder
 
 @testable import HWMTimers
 
-final class TimerTests: XCTestCase {
+final class AGHomeworldMobileEventTimerTests: XCTestCase {
 	
 	var gmtCalendar: Calendar {
 		var calendar = Calendar(identifier: .gregorian)
@@ -31,7 +31,7 @@ final class TimerTests: XCTestCase {
 	
 	func testTimersDaily() throws {
 		
-		let timer = AGTimer(name: "Daily Market", type: TimerType.daily(start: TimeOfDay(hour: 2, minute: 0)))
+		let timer = AGHomeworldMobileEventTimer(name: "Daily Market", type: HomeworldMobileEventType.daily(start: TimeOfDay(hour: 2, minute: 0)))
 		XCTAssertEqual(timer.name, "Daily Market")
 		
 		let startDate = timer.type.nextStartDate()
@@ -45,14 +45,14 @@ final class TimerTests: XCTestCase {
 		
 		// NZ TIME ZONE!!!
 		hour = Calendar.current.component(.hour, from: startDate)
-		XCTAssertEqual(hour, 14)
+		XCTAssertEqual(hour, 15)
 
 	}
 	
 	func testTimerWeekDay() throws {
 		
-		let timer = AGTimer(name: "Daily Rep liason",
-							type: TimerType.day(weekDay: .tuesday, start: TimeOfDay(hour: 0, minute: 0)))
+		let timer = AGHomeworldMobileEventTimer(name: "Daily Rep liason",
+							type: HomeworldMobileEventType.day(weekDay: .tuesday, start: TimeOfDay(hour: 0, minute: 0)))
 		XCTAssertEqual(timer.name, "Daily Rep liason")
 		
 		// should always be in the future!
@@ -70,8 +70,8 @@ final class TimerTests: XCTestCase {
 	
 	func testTimerWeekly() throws {
 		
-		let timer = AGTimer(name: "Weekly Market",
-							type: TimerType.weekly(weekDay: .monday,
+		let timer = AGHomeworldMobileEventTimer(name: "Weekly Market",
+							type: HomeworldMobileEventType.weekly(weekDay: .monday,
 												   start: TimeOfDay(hour: 2, minute: 0)))
 		XCTAssertEqual(timer.name, "Weekly Market")
 		
@@ -91,8 +91,8 @@ final class TimerTests: XCTestCase {
 	
 	func testTimerEvent() throws {
 		
-		let timer = AGTimer(name: "Weekend Event",
-							type: TimerType.event(weekDay: .friday,
+		let timer = AGHomeworldMobileEventTimer(name: "Weekend Event",
+							type: HomeworldMobileEventType.event(weekDay: .friday,
 												  start: TimeOfDay(hour: 11, minute: 0),
 												  durationDays: 3))
 		XCTAssertEqual(timer.name, "Weekend Event")
@@ -115,7 +115,7 @@ final class TimerTests: XCTestCase {
 	
 	func testSerialize() async throws {
 		
-		let timers = AGTimers()
+		let timers = AGEventTimers()
 		let currentTimers = timers.timers
 		
 		print(timers.filePath)

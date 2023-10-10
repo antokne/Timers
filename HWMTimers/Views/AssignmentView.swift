@@ -12,7 +12,7 @@ struct AssignmentView: View {
 	@EnvironmentObject private var timerNotificationService: TimerNotificationService
 
 	@ScaledMetric(relativeTo: .body) var scaledPadding: CGFloat = 10
-	@State var assignment: AGTimer
+	@State var assignment: AGHomeworldMobileEventTimer
 	
 	@State private var enabled: Bool = false
 	
@@ -51,19 +51,19 @@ struct AssignmentView: View {
 }
 
 struct AssignmentView_Previews: PreviewProvider {
-	static var dailyMarket = AGTimer(name: "Daily Market",
-									 type: TimerType.daily(start: TimeOfDay(hour: 2, minute: 0)))
+	static var dailyMarket = AGHomeworldMobileEventTimer(name: "Daily Market",
+									 type: HomeworldMobileEventType.daily(start: TimeOfDay(hour: 2, minute: 0)))
 	
-	static var day = AGTimer(name: "Tanoch Liason +XP",
-							 type: TimerType.day(weekDay: .tuesday, start: TimeOfDay(hour: 0,
+	static var day = AGHomeworldMobileEventTimer(name: "Tanoch Liason +XP",
+							 type: HomeworldMobileEventType.day(weekDay: .tuesday, start: TimeOfDay(hour: 0,
 																					 minute: 0)))
 	
-	static var weekly = AGTimer(name: "Weekly",
-								type: TimerType.weekly(weekDay: .sunday,
+	static var weekly = AGHomeworldMobileEventTimer(name: "Weekly",
+								type: HomeworldMobileEventType.weekly(weekDay: .sunday,
 													   start: TimeOfDay(hour: 2, minute: 0)))
 	
-	static var weekendEvent = AGTimer(name: "Weekend Event",
-									  type: TimerType.event(weekDay: .friday,
+	static var weekendEvent = AGHomeworldMobileEventTimer(name: "Weekend Event",
+									  type: HomeworldMobileEventType.event(weekDay: .friday,
 															start: TimeOfDay(hour: 11, minute: 0),
 															durationDays: 3))
 	

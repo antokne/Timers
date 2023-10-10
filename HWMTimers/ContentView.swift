@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-	
+	@EnvironmentObject private var watchSyncManager: WatchSyncManager
+
 	@StateObject var grantAccessViewModel: SimpleGrantAccessViewModel = SimpleGrantAccessViewModel()
 
 	@StateObject var assignmentViewModel: AGAssignmentViewModel
-	
-	@State var showingSettings = false
+	@StateObject var timersViewModel: TimersViewModel
 
-	
+	@State var showingSettings = false
+	@Environment(\.colorScheme) var colorScheme: ColorScheme
+
 	var body: some View {
 		GeometryReader { geometry in
 			ZStack {
@@ -26,13 +28,20 @@ struct ContentView: View {
 					.aspectRatio(contentMode: .fit)
 					.foregroundColor(Color(white: 0.15))
 					.blur(radius: 1)
+					.padding(5)
 
 				VStack {
 					HStack(alignment: .center) {
-						Text("TIMERS")
-							.font(.homeworld.title)
+						Text("HOMEWORLD")
+							.font(.homeworld.titleFixed)
 							.foregroundColor(.homeworld.blue)
+//							.offset(CGSize(width: 0.0, height: 0.0))
+
 					}
+					Text("MOBILE")
+						.font(.homeworld.title3Fixed)
+						.foregroundColor(.homeworld.blue)
+						.offset(CGSize(width: 0.0, height: -8.0))
 					Spacer()
 				}
 				
@@ -40,14 +49,27 @@ struct ContentView: View {
 				
 				VStack {
 
-					
 					List {
-
+						
 						SimpleGrantNotificationAccessView(viewModel: grantAccessViewModel, textForegroundFooterColour: .gray)
 							.listRowBackground(Color.clear)
 
+						Text("TIMERS")
+							.font(.homeworld.title2)
+							.foregroundColor(.homeworld.blue)
+							.listRowBackground(Color.clear)
+						
+						ForEach(timersViewModel.timerViewModels) { timerViewModel in
+							TimerView(timerViewModel: timerViewModel)
+								.listRowBackground(Color.clear)
+						}
+						
+						Text("EVENTS")
+							.font(.homeworld.title2)
+							.foregroundColor(.homeworld.blue)
+							.listRowBackground(Color.clear)
+
 						ForEach(assignmentViewModel.assignments) { assignment in
-							
 							AssignmentView(assignment: assignment, foregroundColor: .white)
 								.listRowBackground(Color.clear)
 						}
@@ -60,6 +82,8 @@ struct ContentView: View {
 					showingSettings = true
 				}) {
 					Image(systemName: "gearshape")
+						.resizable()
+						.frame(width: 25, height: 25)
 				}
 				.position(x:geometry.size.width - 70, y: 20)
 				.sheet(isPresented: $showingSettings) {
@@ -70,12 +94,24 @@ struct ContentView: View {
 			}
 			.background(Color.homeworld.background)
 		}
+		.onChange(of: colorScheme) { newValue in
+			print("colorScheme [\(colorScheme)] changed to \(newValue)")
+		}
+		.task {
+			await timersViewModel.checkCurrentNotifications()
+			timersViewModel.listenForContextChanges(watchSyncManager: watchSyncManager)
+		}
+		
 	}
 }
 
 struct ContentView_Previews: PreviewProvider {
+	static var watchSyncManager = WatchSyncManager()
 	static var timerNotificationService = TimerNotificationService()
+	static var assignmentViewModel = AGAssignmentViewModel(timerService: timerNotificationService)
+	static var timersViewModel = TimersViewModel()
 	static var previews: some View {
-		ContentView(assignmentViewModel: AGAssignmentViewModel(timerService: timerNotificationService))
+		ContentView(assignmentViewModel: assignmentViewModel, timersViewModel: timersViewModel)
+			.environmentObject(watchSyncManager)
 	}
 }

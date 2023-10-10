@@ -72,7 +72,7 @@ public enum WeekDay: Int, Codable {
 
 private var dateFomatter = DateFormatter()
 
-public enum TimerType: Codable {
+public enum HomeworldMobileEventType: Codable {
 	case daily(start: TimeOfDay)
 	case day(weekDay: WeekDay, start: TimeOfDay)
 	case weekly(weekDay: WeekDay, start: TimeOfDay)
@@ -125,7 +125,7 @@ public enum TimerType: Codable {
 	}
 	
 
-	public func nextStartDate(calendar: Calendar = TimerType.gmtCalendar) -> Date {
+	public func nextStartDate(calendar: Calendar = HomeworldMobileEventType.gmtCalendar) -> Date {
 		var startDate: Date = Date()
 		DateBuilder.withCalendar(calendar) {
 			switch self {
@@ -142,7 +142,7 @@ public enum TimerType: Codable {
 		return startDate
 	}
 	
-	public func nextEndDate(calendar: Calendar = TimerType.gmtCalendar) -> Date? {
+	public func nextEndDate(calendar: Calendar = HomeworldMobileEventType.gmtCalendar) -> Date? {
 		DateBuilder.withCalendar(calendar) {
 			switch self {
 			case .daily(_),
@@ -192,26 +192,26 @@ public enum TimerType: Codable {
 		switch self {
 		case .daily(let start):
 			var date = DateComponents()
-			date.calendar = TimerType.gmtCalendar
+			date.calendar = HomeworldMobileEventType.gmtCalendar
 			date.hour = start.hour
 			date.minute = start.minute
 			return (UNCalendarNotificationTrigger(dateMatching: date, repeats: repeats), nil)
 		case .day(let weekDay, let start),
 				.weekly(let weekDay, let start):
 			var date = DateComponents()
-			date.calendar = TimerType.gmtCalendar
+			date.calendar = HomeworldMobileEventType.gmtCalendar
 			date.hour = start.hour
 			date.minute = start.minute
 			date.weekday = weekDay.rawValue
 			return (UNCalendarNotificationTrigger(dateMatching: date, repeats: repeats), nil)
 		case .event(let weekDay, let start, let durationDays):
 			var startDate = DateComponents()
-			startDate.calendar = TimerType.gmtCalendar
+			startDate.calendar = HomeworldMobileEventType.gmtCalendar
 			startDate.hour = start.hour
 			startDate.minute = start.minute
 			startDate.weekday = weekDay.rawValue
 			var endDate = DateComponents()
-			endDate.calendar = TimerType.gmtCalendar
+			endDate.calendar = HomeworldMobileEventType.gmtCalendar
 			endDate.hour = start.hour
 			endDate.minute = start.minute
 			endDate.weekday = weekDay.addDays(days: durationDays).rawValue
@@ -223,11 +223,11 @@ public enum TimerType: Codable {
 	}
 }
 
-extension TimerType: Equatable {
+extension HomeworldMobileEventType: Equatable {
 	
 }
 
-public class AGTimer: Codable, Identifiable {
+public class AGHomeworldMobileEventTimer: Codable, Identifiable {
 	
 	// what type of time, e.g. daily, weekly, start - end etc.
 	
@@ -237,7 +237,7 @@ public class AGTimer: Codable, Identifiable {
 	
 	var repeats: Bool = true
 	
-	var type: TimerType
+	var type: HomeworldMobileEventType
 	
 	// Daily market reset every day at 0200 GMT
 	// Weekly Market reset weekly Monday 0200 GMT
@@ -254,7 +254,7 @@ public class AGTimer: Codable, Identifiable {
 	// everyday 0000 gmt
 	
 	
-	public init(name: String, type: TimerType) {
+	public init(name: String, type: HomeworldMobileEventType) {
 		self.name = name
 		self.type = type
 	}
@@ -264,9 +264,9 @@ public class AGTimer: Codable, Identifiable {
 	}
 }
 
-extension AGTimer: Equatable {
+extension AGHomeworldMobileEventTimer: Equatable {
 	
-	public static func == (lhs: AGTimer, rhs: AGTimer) -> Bool {
+	public static func == (lhs: AGHomeworldMobileEventTimer, rhs: AGHomeworldMobileEventTimer) -> Bool {
 		lhs.name == rhs.name && lhs.type == rhs.type
 	}
 	
@@ -274,51 +274,51 @@ extension AGTimer: Equatable {
 }
 
 
-public class AGTimers: Codable {
+public class AGEventTimers: Codable {
 
 	static var fileName = "homeworld-mobile-timers.json"
 	
-	static var dailyMarket = AGTimer(name: "Daily Market",
-									 type: TimerType.daily(start: TimeOfDay(hour: 2, minute: 0)))
+	static var dailyMarket = AGHomeworldMobileEventTimer(name: "Daily Market",
+									 type: HomeworldMobileEventType.daily(start: TimeOfDay(hour: 2, minute: 0)))
 
-	static var dailyAssignments = AGTimer(name: "Daily Assignments",
-									  type: TimerType.daily(start: TimeOfDay(hour: 3, minute: 0)))
+	static var dailyAssignments = AGHomeworldMobileEventTimer(name: "Daily Assignments",
+									  type: HomeworldMobileEventType.daily(start: TimeOfDay(hour: 3, minute: 0)))
 	
-	static var dailyLiaison = AGTimer(name: "Daily Liaison",
-									  type: TimerType.daily(start: TimeOfDay(hour: 0, minute: 0)))
+	static var dailyLiaison = AGHomeworldMobileEventTimer(name: "Daily Liaison",
+									  type: HomeworldMobileEventType.daily(start: TimeOfDay(hour: 0, minute: 0)))
 
-	static var dailyClan = AGTimer(name: "Daily Clan Assignments",
-								   type: TimerType.daily(start: TimeOfDay(hour: 0, minute: 0)))
+	static var dailyClan = AGHomeworldMobileEventTimer(name: "Daily Clan Assignments",
+								   type: HomeworldMobileEventType.daily(start: TimeOfDay(hour: 0, minute: 0)))
 	
-	static var communityThursday = AGTimer(name: "Community Thursday",
-										   type: TimerType.weekly(weekDay: .thursday,
+	static var communityThursday = AGHomeworldMobileEventTimer(name: "Community Thursday",
+										   type: HomeworldMobileEventType.weekly(weekDay: .thursday,
 																  start: TimeOfDay(hour: 15, minute: 0)))
 	
 	
-	static var weeklyMarket = AGTimer(name: "Weekly Market",
-									  type: TimerType.weekly(weekDay: .monday,
+	static var weeklyMarket = AGHomeworldMobileEventTimer(name: "Weekly Market",
+									  type: HomeworldMobileEventType.weekly(weekDay: .monday,
 															 start: TimeOfDay(hour: 2, minute: 0)))
 	
-	static var weeklyAssignments = AGTimer(name: "Weekly Assignments",
-									  type: TimerType.weekly(weekDay: .sunday,
+	static var weeklyAssignments = AGHomeworldMobileEventTimer(name: "Weekly Assignments",
+									  type: HomeworldMobileEventType.weekly(weekDay: .sunday,
 															 start: TimeOfDay(hour: 3, minute: 0)))
 	
-	static var weekendEvent = AGTimer(name: "Weekend Event",
-									  type: TimerType.event(weekDay: .friday,
+	static var weekendEvent = AGHomeworldMobileEventTimer(name: "Weekend Event",
+									  type: HomeworldMobileEventType.event(weekDay: .friday,
 															start: TimeOfDay(hour: 11, minute: 0),
 															durationDays: 3))
 	
-	static var iyatequaLiaison = AGTimer(name: "Iyatequa Liaison +XP",
-									  type: TimerType.day(weekDay: .monday, start: TimeOfDay(hour: 0, minute: 0)))
+	static var iyatequaLiaison = AGHomeworldMobileEventTimer(name: "Iyatequa Liaison +XP",
+									  type: HomeworldMobileEventType.day(weekDay: .monday, start: TimeOfDay(hour: 0, minute: 0)))
 
-	static var tanochLiaison = AGTimer(name: "Tanoch Liaison +XP",
-									  type: TimerType.day(weekDay: .tuesday, start: TimeOfDay(hour: 0, minute: 0)))
+	static var tanochLiaison = AGHomeworldMobileEventTimer(name: "Tanoch Liaison +XP",
+									  type: HomeworldMobileEventType.day(weekDay: .tuesday, start: TimeOfDay(hour: 0, minute: 0)))
 
-	static var yaotLiaison = AGTimer(name: "Yaot Liaison +XP",
-									  type: TimerType.day(weekDay: .wednesday, start: TimeOfDay(hour: 0, minute: 0)))
+	static var yaotLiaison = AGHomeworldMobileEventTimer(name: "Yaot Liaison +XP",
+									  type: HomeworldMobileEventType.day(weekDay: .wednesday, start: TimeOfDay(hour: 0, minute: 0)))
 	
-	static var amassariLiaison = AGTimer(name: "Amassari Liaison +XP",
-									type: TimerType.day(weekDay: .thursday, start: TimeOfDay(hour: 0, minute: 0)))
+	static var amassariLiaison = AGHomeworldMobileEventTimer(name: "Amassari Liaison +XP",
+									type: HomeworldMobileEventType.day(weekDay: .thursday, start: TimeOfDay(hour: 0, minute: 0)))
 	
 	var defaultTimers = [dailyMarket,
 						 dailyAssignments,
@@ -334,12 +334,12 @@ public class AGTimers: Codable {
 						 amassariLiaison]
 
 	
-	var timers: [AGTimer] = []
+	var timers: [AGHomeworldMobileEventTimer] = []
 	
 	var filePath: URL {
 		URL
 			.documentsDirectory
-			.appendingPathComponent(AGTimers.fileName, conformingTo: .json)
+			.appendingPathComponent(AGEventTimers.fileName, conformingTo: .json)
 	}
 	
 	func saveTimers() async throws {
@@ -355,7 +355,7 @@ public class AGTimers: Codable {
 		
 		let data = try Data(contentsOf: filePath)
 		let decoder = JSONDecoder()
-		timers = try decoder.decode([AGTimer].self, from: data)
+		timers = try decoder.decode([AGHomeworldMobileEventTimer].self, from: data)
 		
 	}
 	
