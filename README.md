@@ -16,3 +16,7 @@ Currently supports:
 * Tanoch Liaison +XP
 * Yaot Liaison +XP
 * Amassari Liaison +XP
+
+Also supports two timers:
+* Remote mining - currently just 4 hrs
+* Research - including a % bonus configured in settings.

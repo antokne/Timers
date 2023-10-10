@@ -132,6 +132,7 @@
 		E4758AE72AD3741900FFED40 /* AGHomeworldMobileTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGHomeworldMobileTimer.swift; sourceTree = "<group>"; };
 		E4758B062AD4DF0F00FFED40 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		E4758B0A2AD4E19600FFED40 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		E4758B0D2AD6138300FFED40 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E47F56652AC1014500C55597 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		E47F56682AC106C600C55597 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E47F566B2AC1114900C55597 /* WatchSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncManager.swift; sourceTree = "<group>"; };
@@ -295,6 +296,7 @@
 		E4FABD462A9C41B300C93EA8 = {
 			isa = PBXGroup;
 			children = (
+				E4758B0D2AD6138300FFED40 /* README.md */,
 				E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */,
 				E48EF9462AB80A9E0086B159 /* HWMTimers Watch App.entitlements */,
 				E4FABD512A9C41B300C93EA8 /* HWMTimers */,
