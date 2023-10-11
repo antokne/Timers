@@ -18,7 +18,7 @@ Currently supports:
 * Amassari Liaison +XP
 
 Also supports two timers:
-* Remote mining - currently just 4 hrs
-* Research - including a % bonus configured in settings.
+* Remote mining - currently 4 or 8 hrs
+* Research - including a % bonus configured in settings and either 4 or 8 hrs.
 
 Timers are supported on phone app and watch.
