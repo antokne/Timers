@@ -11,7 +11,7 @@ import Combine
 import UserNotifications
 
 
-enum GrantAccessNotificationState {
+public enum GrantAccessNotificationState {
 	case notEnabled
 	case denied
 	case ok
@@ -20,7 +20,7 @@ enum GrantAccessNotificationState {
 private var IgnoreNotificationNotEnabledKey = "SimpleGrantAccess.IgnoreNotificationNotEnabledKey"
 
 
-class SimpleGrantAccessViewModel: ObservableObject {
+public class SimpleGrantAccessViewModel: ObservableObject {
 	
 	@Published var showNoticiationState: GrantAccessNotificationState = .notEnabled
 	
@@ -31,7 +31,7 @@ class SimpleGrantAccessViewModel: ObservableObject {
 	
 	@AppStorage(IgnoreNotificationNotEnabledKey) private var ignoreNotificationNotEnabled: Bool = false
 	
-	init() {
+	public init() {
 		updateNotificationState()
 	}
 	

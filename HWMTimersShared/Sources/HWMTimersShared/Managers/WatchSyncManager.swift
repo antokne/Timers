@@ -10,15 +10,18 @@ import SwiftUI
 import WatchConnectivity
 import OSLog
 
-class WatchSyncManager: NSObject, ObservableObject {
+/// Transferrring time across boundaries.
+public let TimerChangedEventKey = "Timer.timerChangedEvent"
+
+public class WatchSyncManager: NSObject, ObservableObject {
 		
 	private let logger = Logger(subsystem: "HWMTimers", category: "WatchSyncManager")
 	
 	private var session: WCSession?
 	
-	@Published var applicationContext: [String : Any] = [: ]
+	@Published public private(set) var applicationContext: [String : Any] = [: ]
 
-	override init() {
+	public override init() {
 		super.init()
 		setup()
 	}
@@ -36,7 +39,7 @@ class WatchSyncManager: NSObject, ObservableObject {
 		
 	}
 	
-	func updateApplicationContext(_ applicationContext: [String : Any]) throws {
+	public func updateApplicationContext(_ applicationContext: [String : Any]) throws {
 		logger.info("sending context \(applicationContext)")
 		try session?.updateApplicationContext(applicationContext)
 	}
@@ -45,21 +48,21 @@ class WatchSyncManager: NSObject, ObservableObject {
 extension WatchSyncManager: WCSessionDelegate {
 	
 #if os(iOS)
-	func sessionDidBecomeInactive(_ session: WCSession) {
+	public func sessionDidBecomeInactive(_ session: WCSession) {
 		logger.debug("sessionDidBecomeInactive")
 	}
 	
-	func sessionDidDeactivate(_ session: WCSession) {
+	public func sessionDidDeactivate(_ session: WCSession) {
 		logger.debug("sessionDidDeactivate")
 
 	}
 #endif
 	
-	func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+	public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
 		logger.debug("Got activationState state \(activationState.rawValue)")
 	}
 	
-	func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+	public func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
 		logger.info("didReceiveApplicationContext \(applicationContext, privacy: .public)")
 
 		Task { @MainActor in

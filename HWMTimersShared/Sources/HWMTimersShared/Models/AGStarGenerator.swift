@@ -1,5 +1,5 @@
 //
-//  StarsModel.swift
+//  StarGenerator.swift
 //  HWMTimers
 //
 //  Created by Ant Gardiner on 22/09/23.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct SimpleStar: Hashable, Equatable {
+public struct AGSimpleStar: Hashable, Equatable {
 	var x: Double
 	var removalDate: Date
 	var speed: Double
@@ -17,10 +17,15 @@ struct SimpleStar: Hashable, Equatable {
 	var points: Int
 }
 
-class StarGenerator: ObservableObject {
-	var stars = Set<SimpleStar>()
+public class AGStarGenerator: ObservableObject {
+	var stars = Set<AGSimpleStar>()
 	
 	var lastIntTime = 0
+	
+	public init(stars: Set<AGSimpleStar> = Set<AGSimpleStar>(), lastIntTime: Int = 0) {
+		self.stars = stars
+		self.lastIntTime = lastIntTime
+	}
 	
 	func update(to date: Date) {
 		
@@ -31,7 +36,7 @@ class StarGenerator: ObservableObject {
 		lastIntTime = Int(date.timeIntervalSince1970)
 		
 		stars = stars.filter { $0.removalDate > date }
-		stars.insert(SimpleStar(x: Double.random(in: 0...1),
+		stars.insert(AGSimpleStar(x: Double.random(in: 0...1),
 								removalDate: date + time,
 								speed: Double.random(in: 0.01...0.02),
 								color: color,

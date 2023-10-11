@@ -1,5 +1,5 @@
 //
-//  AGTimer.swift
+//  AGHomeworldMobileTimer.swift
 //  HWMTimers
 //
 //  Created by Ant Gardiner on 9/10/23.
@@ -8,24 +8,49 @@
 import Foundation
 import UserNotifications
 
-enum AGHomeworldMobileTimerType: Int, Codable {
+public enum AGHomeworldMobileTimerType: Int, Codable {
 	case remoteMining = 0
 	case research = 1
 }
 
-struct AGHomeworldMobileTimer: Codable, Identifiable {
-	var id: String {
+public enum AGHomeworldMobileTimerDuration: CaseIterable, Identifiable, Codable {
+	public var id: Self { self }
+	case hr4
+	case hr8
+	
+	public var name: String {
+		switch self {
+		case .hr4:
+			return "4hrs"
+		case .hr8:
+			return "8hrs"
+		}
+	}
+	
+	var duration: TimeInterval {
+		switch self {
+		case .hr4:
+			return 4 * 60 * 60
+		case .hr8:
+			return 8 * 60 * 60
+		}
+	}
+}
+
+public struct AGHomeworldMobileTimer: Codable, Identifiable {
+	public var id: String {
 		title
 	}	
-	var title: String
-	var running: Bool = false
-	var duration: TimeInterval
+	public private(set) var title: String
+	public private(set) var running: Bool = false
+	var duration: [AGHomeworldMobileTimerDuration]
+	public var selectedDuration: AGHomeworldMobileTimerDuration = .hr4
 	var startDate: Date?
-	var formatedDurationLeft: String = ""
-	var type: AGHomeworldMobileTimerType
+	public private(set) var formatedDurationLeft: String = ""
+	public private(set) var type: AGHomeworldMobileTimerType
 	var percentReduction: Int
 	
-	init(title: String, running: Bool, duration: TimeInterval, type: AGHomeworldMobileTimerType, percentReduction: Int = 0) {
+	public init(title: String, running: Bool, duration: [AGHomeworldMobileTimerDuration], type: AGHomeworldMobileTimerType, percentReduction: Int = 0) {
 		self.title = title
 		self.running = running
 		self.duration = duration
@@ -33,7 +58,8 @@ struct AGHomeworldMobileTimer: Codable, Identifiable {
 		self.percentReduction = percentReduction
 	}
 	
-	mutating func startTimer(with percentReduction: Int) {
+	mutating public func startTimer(with percentReduction: Int, selectedDuration: AGHomeworldMobileTimerDuration) {
+		self.selectedDuration = selectedDuration
 		self.percentReduction = percentReduction
 		let date = Date()
 		startDate = date
@@ -42,20 +68,20 @@ struct AGHomeworldMobileTimer: Codable, Identifiable {
 		configureNotification(startDate: date)
 	}
 	
-	mutating func stopTimer() {
+	mutating public func stopTimer() {
 		running = false
 		startDate = nil
 		updateDurationLeft()
 		removeNotification()
 	}
 	
-	mutating func timerAction() {
+	mutating public func timerAction() {
 		
 		updateDurationLeft()
-		print(formatedDurationLeft)
+//		print(formatedDurationLeft)
 		
 		let remaining = durationRemaining()
-		print(remaining)
+//		print(remaining)
 		
 		if remaining <= 0 {
 			
@@ -66,7 +92,7 @@ struct AGHomeworldMobileTimer: Codable, Identifiable {
 	}
 	
 	var adjustedDuration: Double {
-		duration - duration * Double(percentReduction) / 100.0
+		selectedDuration.duration - selectedDuration.duration * Double(percentReduction) / 100.0
 	}
 	
 	func durationRemaining() -> TimeInterval {
@@ -113,11 +139,11 @@ struct AGHomeworldMobileTimer: Codable, Identifiable {
 		notificationCenter.removePendingNotificationRequests(withIdentifiers: [notificationId])
 	}
 	
-	var notificationId: String {
+	public var notificationId: String {
 		"notification" + title
 	}
 	
-	mutating func configureTimer(with notificationRequest: UNNotificationRequest, with percentReduction: Int) {
+	mutating public func configureTimer(with notificationRequest: UNNotificationRequest, with percentReduction: Int) {
 		
 		self.percentReduction = percentReduction
 		
@@ -137,7 +163,7 @@ struct AGHomeworldMobileTimer: Codable, Identifiable {
 	
 }
 
-extension AGHomeworldMobileTimer {
+public extension AGHomeworldMobileTimer {
 	
 	func asData() -> Data? {
 		guard let data = try? JSONEncoder().encode(self) else {
@@ -153,7 +179,7 @@ extension AGHomeworldMobileTimer {
 
 
 extension AGHomeworldMobileTimer: Equatable {
-	static func ==(lhs: AGHomeworldMobileTimer, rhs: AGHomeworldMobileTimer) -> Bool {
+	public static func ==(lhs: AGHomeworldMobileTimer, rhs: AGHomeworldMobileTimer) -> Bool {
 		lhs.id == rhs.id
 	}
 }

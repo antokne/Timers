@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-enum BevelCorner {
+public enum BevelCorner : Sendable{
 	case topLeft
 	case topRight
 	case bottomLeft
 	case bottomRight
 }
 
-struct BevelledCorner: Shape {
+public struct BevelledCorner: Shape {
 	
 	// what type of corner is it.
 	var corner: BevelCorner
 	
-	func path(in rect: CGRect) -> Path {
+	public func path(in rect: CGRect) -> Path {
 
 		// this is a calc for length of side of a hexagon.
 		var sideLength: Double {
@@ -89,8 +89,8 @@ struct BevelledCorner: Shape {
 	
 }
 
-struct BevelledCornerView: View {
-	var body: some View {
+public struct BevelledCornerView: View {
+	public var body: some View {
 		ZStack {
 			Canvas { context, size in
 				

@@ -7,12 +7,13 @@
 
 import SwiftUI
 import DateBuilder
+import HWMTimersShared
 
 struct AssignmentView: View {
 	@EnvironmentObject private var timerNotificationService: TimerNotificationService
 
 	@ScaledMetric(relativeTo: .body) var scaledPadding: CGFloat = 10
-	@State var assignment: AGHomeworldMobileEventTimer
+	@State var assignment: AGHomeworldMobileEvent
 	
 	@State private var enabled: Bool = false
 	
@@ -51,19 +52,19 @@ struct AssignmentView: View {
 }
 
 struct AssignmentView_Previews: PreviewProvider {
-	static var dailyMarket = AGHomeworldMobileEventTimer(name: "Daily Market",
-									 type: HomeworldMobileEventType.daily(start: TimeOfDay(hour: 2, minute: 0)))
+	static var dailyMarket = AGHomeworldMobileEvent(name: "Daily Market",
+									 type: AGHomeworldMobileEventType.daily(start: TimeOfDay(hour: 2, minute: 0)))
 	
-	static var day = AGHomeworldMobileEventTimer(name: "Tanoch Liason +XP",
-							 type: HomeworldMobileEventType.day(weekDay: .tuesday, start: TimeOfDay(hour: 0,
+	static var day = AGHomeworldMobileEvent(name: "Tanoch Liason +XP",
+							 type: AGHomeworldMobileEventType.day(weekDay: .tuesday, start: TimeOfDay(hour: 0,
 																					 minute: 0)))
 	
-	static var weekly = AGHomeworldMobileEventTimer(name: "Weekly",
-								type: HomeworldMobileEventType.weekly(weekDay: .sunday,
+	static var weekly = AGHomeworldMobileEvent(name: "Weekly",
+								type: AGHomeworldMobileEventType.weekly(weekDay: .sunday,
 													   start: TimeOfDay(hour: 2, minute: 0)))
 	
-	static var weekendEvent = AGHomeworldMobileEventTimer(name: "Weekend Event",
-									  type: HomeworldMobileEventType.event(weekDay: .friday,
+	static var weekendEvent = AGHomeworldMobileEvent(name: "Weekend Event",
+									  type: AGHomeworldMobileEventType.event(weekDay: .friday,
 															start: TimeOfDay(hour: 11, minute: 0),
 															durationDays: 3))
 	

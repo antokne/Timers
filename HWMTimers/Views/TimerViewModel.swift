@@ -8,11 +8,14 @@
 import Foundation
 import SwiftUI
 import UserNotifications
+import HWMTimersShared
 
 class TimerViewModel : ObservableObject, Identifiable {
 	
 	@Published var timer: AGHomeworldMobileTimer
 	
+	@Published var selectedDuration: AGHomeworldMobileTimerDuration = .hr4
+
 	weak var delegate: TimerNotificationProtocol?
 
 	@AppStorage(SettingsResearchPercentBonusKey) var researchPercentBonus: Int = 0
@@ -24,7 +27,7 @@ class TimerViewModel : ObservableObject, Identifiable {
 	
 	func startTimer() {
 		let reduction = percentReduction(timer: timer)
-		timer.startTimer(with: reduction)
+		timer.startTimer(with: reduction, selectedDuration: selectedDuration)
 		delegate?.timerChanged()
 	}
 	

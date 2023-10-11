@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HWMTimersShared
 
 struct SettingsView: View {
 	@Environment(\.presentationMode) var presentationMode

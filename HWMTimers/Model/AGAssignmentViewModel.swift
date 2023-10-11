@@ -7,14 +7,15 @@
 
 import Foundation
 import SwiftUI
+import HWMTimersShared
 
 public class AGAssignmentViewModel: ObservableObject {
 	
-	@Published var assignments: [AGHomeworldMobileEventTimer] = []
+	@Published var assignments: [AGHomeworldMobileEvent] = []
 	
 	var timerService: TimerNotificationService
 	
-	var timerEvents = AGEventTimers()
+	var eventTimers = AGEventTimers()
 	
 	@Published var timers: [AGHomeworldMobileTimer] = []
 	@AppStorage(SettingsResearchPercentBonusKey) var researchPercentBonus: Int = 0
@@ -26,25 +27,21 @@ public class AGAssignmentViewModel: ObservableObject {
 
 		Task {
 			do {
-				try await timerEvents.loadTimers()
-				assignments = timerEvents.timers
+				try await eventTimers.loadEvents()
+				updateAssignments(eventTimers.events)
 			}
 			catch {
 				print(error)
-
-			}
-			if timerEvents.timers.count == 0 {
-				timerEvents.timers = timerEvents.defaultTimers
 			}
 			
 			let notificationRequests = await timerService.getCurrentPendingNotifications()
 			
 			for request in notificationRequests {
 				
-				if let timer = timerEvents.timers.first(where: { $0.notificationIdentifier == request.identifier }) {
+				if let timer = eventTimers.events.first(where: { $0.notificationIdentifier == request.identifier }) {
 					
-					if let index = timerEvents.timers.firstIndex(of: timer) {
-						timerEvents.timers[index].enabled = true
+					if let index = eventTimers.events.firstIndex(of: timer) {
+						eventTimers.events[index].enabled = true
 					}
 					
 				}
@@ -53,14 +50,18 @@ public class AGAssignmentViewModel: ObservableObject {
 			
 			print(notificationRequests)
 			
-			Task { @MainActor in
-				self.assignments = timerEvents.timers
-			}
+			updateAssignments(eventTimers.events)
 		}
 		
-		timers.append(AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration: 4 * 60 * 60, type: .remoteMining, percentReduction: researchPercentBonus))
-		timers.append(AGHomeworldMobileTimer(title: "Research", running: false, duration: 4 * 60 * 60, type: .research))
+		timers.append(AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration: [.hr4, .hr8], type: .remoteMining, percentReduction: researchPercentBonus))
+		timers.append(AGHomeworldMobileTimer(title: "Research", running: false, duration: [.hr4, .hr8], type: .research))
 		
+	}
+	
+	func updateAssignments(_ assignments: [AGHomeworldMobileEvent]) {
+		Task { @MainActor in
+			self.assignments = assignments
+		}
 	}
 	
 }

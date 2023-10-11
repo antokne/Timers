@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "datebuilder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dreymonde/DateBuilder",
+      "state" : {
+        "revision" : "374ca554ed132f84bc97158901e6208c9608a6bc",
+        "version" : "0.1.4"
+      }
+    }
+  ],
+  "version" : 2
+}

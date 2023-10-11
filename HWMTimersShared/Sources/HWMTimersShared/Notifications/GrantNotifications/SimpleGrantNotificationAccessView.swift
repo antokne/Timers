@@ -7,14 +7,25 @@
 
 import SwiftUI
 
-struct SimpleGrantNotificationAccessView: View {
+public struct SimpleGrantNotificationAccessView: View {
 	
 	@ObservedObject var viewModel: SimpleGrantAccessViewModel
 	
 	var textForegroundColour = Color.white
 	var textForegroundFooterColour = Color.black
+	
+	var fontTitle: Font = .title
+	var fontBody: Font = .body
+	
+	public init(viewModel: SimpleGrantAccessViewModel, textForegroundColour: SwiftUI.Color = Color.white, textForegroundFooterColour: SwiftUI.Color = Color.black, fontTitle: Font = .title, fontBody: Font = .body) {
+		self.viewModel = viewModel
+		self.textForegroundColour = textForegroundColour
+		self.textForegroundFooterColour = textForegroundFooterColour
+		self.fontTitle = fontTitle
+		self.fontBody = fontBody
+	}
 
-	var body: some View {
+	public var body: some View {
 		Section {
 			if viewModel.showNoticiationState == .notEnabled {
 				VStack {
@@ -22,7 +33,7 @@ struct SimpleGrantNotificationAccessView: View {
 					Button(action: viewModel.authNotifications) {
 						Text("Authorise Notications")
 							.frame(maxWidth: .infinity)
-							.font(.homeworld.title3)
+							.font(fontTitle)
 					}
 				}
 				.frame(minHeight: 50)
@@ -55,7 +66,7 @@ struct SimpleGrantNotificationAccessView: View {
 					.foregroundColor(textForegroundFooterColour)
 			}
 		}
-		.font(.homeworld.body)
+		.font(fontBody)
 		#if os(iOS) || os(macOS)
 		.willEnterForeground {
 			viewModel.updateNotificationState()

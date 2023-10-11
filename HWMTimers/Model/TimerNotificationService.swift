@@ -8,6 +8,7 @@
 import Foundation
 import UserNotifications
 import NiceNotifications
+import HWMTimersShared
 
 class TimerNotificationService: NSObject, ObservableObject {
 	
@@ -16,7 +17,7 @@ class TimerNotificationService: NSObject, ObservableObject {
 		setNotificationDelegate()
 	}
 	
-	func update(timer: AGHomeworldMobileEventTimer) {
+	func update(timer: AGHomeworldMobileEvent) {
 		if timer.enabled {
 			setNotification(timer: timer)
 		}
@@ -38,7 +39,7 @@ class TimerNotificationService: NSObject, ObservableObject {
 		UNUserNotificationCenter.current().delegate = self
 	}
 	
-	private func setNotification(timer: AGHomeworldMobileEventTimer) {
+	private func setNotification(timer: AGHomeworldMobileEvent) {
 		
 		let triggers = timer.type.notificationTriggers(repeats: timer.repeats)
 		
@@ -55,7 +56,7 @@ class TimerNotificationService: NSObject, ObservableObject {
 		}
 	}
 	
-	private func removeNotification(timer: AGHomeworldMobileEventTimer) {
+	private func removeNotification(timer: AGHomeworldMobileEvent) {
 		LocalNotifications.Env.removePendingNotificationRequests([timer.notificationIdentifier])
 	}
 	

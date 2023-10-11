@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HWMTimersShared
 
 struct ContentView: View {
 	@EnvironmentObject private var watchSyncManager: WatchSyncManager
@@ -25,25 +26,29 @@ struct ContentView: View {
 				.padding(.top, 2)
 			List {
 				
-				SimpleGrantNotificationAccessView(viewModel: grantAccessViewModel, textForegroundFooterColour: .gray)
+				SimpleGrantNotificationAccessView(viewModel: grantAccessViewModel, 
+												  textForegroundFooterColour: .gray,
+												  fontTitle: .homeworld.title3,
+												  fontBody: .homeworld.body)
 				
 				ForEach(viewModel.timerViewModels) { timerViewModel in
 					TimerView(timerViewModel: timerViewModel)
 						.listRowBackground(Color.clear)
+						.listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
 				}
 			}
+			.padding(0)
 			.font(.homeworld.title3)
 		}
 		.background {
-			if #available(watchOS 15, *) {
-				TheStarsLikeDustView()
-					.background(Color.homeworld.background)
-			}
-			else {
-				TheStarsLikeDustView()
-			}
+			TheStarsLikeDustView(fillColor: .homeworld.blue)
+				.modify { picker in
+#if os(watchOS)
+#else
+						.background(Color.homeworld.background)
+#endif
+				}
 		}
-		//.navigationTitle("TIMERS")
 		.task {
 			await viewModel.checkCurrentNotifications()
 			
@@ -52,9 +57,6 @@ struct ContentView: View {
 		.padding(.top, 22)
 	}
 	
-	func showConfig() {
-		print("config")
-	}
 }
 
 struct ContentView_Previews: PreviewProvider {

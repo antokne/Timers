@@ -7,11 +7,18 @@
 
 import SwiftUI
 
-struct TheStarsLikeDustView: View {
+public struct TheStarsLikeDustView: View {
 
-	@StateObject private var starsGenerator = StarGenerator()
+	@StateObject private var starsGenerator: AGStarGenerator
+	
+	var fillColor: Color
+	
+	public init(starsGenerator: AGStarGenerator = AGStarGenerator(), fillColor: Color) {
+		_starsGenerator = StateObject(wrappedValue: starsGenerator)
+		self.fillColor = fillColor
+	}
 
-	var body: some View {
+	public var body: some View {
 		GeometryReader { geometry in
 			
 			TimelineView(.animation) { timeline in
@@ -26,10 +33,10 @@ struct TheStarsLikeDustView: View {
 #endif
 
 					let topLeft = BevelledCorner(corner: .topLeft).path(in: CGRect(x: xLeft, y: geometry.safeAreaInsets.top, width: 20, height: 20))
-					context.fill(topLeft, with: .color(.homeworld.blue))
+					context.fill(topLeft, with: .color(fillColor))
 					
 					let topRight = BevelledCorner(corner: .topRight).path(in: CGRect(x: xRight, y: geometry.safeAreaInsets.top, width: 20, height: 20))
-					context.fill(topRight, with: .color(.homeworld.blue))
+					context.fill(topRight, with: .color(fillColor))
 					
 					// _ = print(Int(timeline.date.timeIntervalSince1970))
 					
@@ -55,6 +62,6 @@ struct TheStarsLikeDustView: View {
 }
 
 #Preview {
-	TheStarsLikeDustView()
+	TheStarsLikeDustView(fillColor: .blue)
 		.background(.black)
 }

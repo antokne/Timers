@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HWMTimersShared
 
 @main
 struct HWMTimers_WatchApp: App {

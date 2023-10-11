@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-extension Font {
+public extension Font {
 	
 	struct homeworld {
 		static var titleFixed: Font = Font.custom("Michroma-Regular", fixedSize: 22)
 		static var title3Fixed: Font = Font.custom("Michroma-Regular", fixedSize: 15)
+		static var bodyFixed: Font = Font.custom("Michroma-Regular", fixedSize: 14)
 
 		static var title: Font = Font.custom("Michroma-Regular", size: 25, relativeTo: .title)
 		static var title2: Font = Font.custom("Michroma-Regular", size: 18, relativeTo: .title2)
@@ -22,7 +23,7 @@ extension Font {
 	
 }
 
-extension Color {
+public extension Color {
 	struct homeworld {
 		static var blue = /*@START_MENU_TOKEN@*/Color(red: 0.378, green: 0.645, blue: 0.979)/*@END_MENU_TOKEN@*/
 		static var background = Color(red: 0.051, green: 0.090, blue: 0.157)

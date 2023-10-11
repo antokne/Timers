@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import HWMTimersShared
 
 struct TimerView: View {
 	@EnvironmentObject private var watchSyncManager: WatchSyncManager
 
 	@ObservedObject var timerViewModel: TimerViewModel
 	
+	
 	var body: some View {
 		HStack {
 			if timerViewModel.timer.running == false {
-				HStack {
+				HStack(spacing: 0) {
 					Button(action: { startTimer(timerViewModel: timerViewModel) }) {
 						
 						switch timerViewModel.timer.type {
@@ -30,6 +32,36 @@ struct TimerView: View {
 							.multilineTextAlignment(.leading)
 					}
 					.buttonStyle(.borderless)
+					
+					Spacer()
+					Picker(selection: $timerViewModel.selectedDuration) {
+						ForEach(AGHomeworldMobileTimerDuration.allCases) { duration in
+							HStack {
+								Text(duration.name)
+									.font(.homeworld.body)
+									.foregroundColor(.homeworld.blue)
+									.padding(2)
+							}
+						}
+					} label: {
+//						Text("Duration")
+//							.foregroundColor(.homeworld.blue)
+					}
+					.modify { picker in
+						#if os(watchOS)
+							picker
+						#else
+							picker
+								.pickerStyle(.menu)
+								.frame(width: 80, height: 40)
+								.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
+						#endif
+					}
+					.overlay {
+						RoundedRectangle(cornerRadius: 4)
+							.stroke(Color.homeworld.blue, lineWidth:1)
+					}
+
 				}
 			}
 			else {
@@ -40,7 +72,6 @@ struct TimerView: View {
 								.resizable()
 								.frame(width: 40, height: 40)
 								.foregroundColor(.white)
-							//								Spacer()
 							VStack(alignment: .leading) {
 								Text(timerViewModel.timer.title)
 								Text(timerViewModel.timer.formatedDurationLeft)
@@ -83,10 +114,11 @@ struct TimerView: View {
 	}
 }
 
-let timer = AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration: 4 * 60 * 60, type: .remoteMining, percentReduction: 0)
-let timer2 = AGHomeworldMobileTimer(title: "Research", running: false, duration: 4 * 60 * 60, type: .research)
+let timer = AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration: [.hr4, .hr8], type: .remoteMining, percentReduction: 0)
+let timer2 = AGHomeworldMobileTimer(title: "Research", running: false, duration: [.hr4, .hr8], type: .research)
 let timerViewModel = TimerViewModel(timer: timer, delegate: nil)
 let timerViewModel2 = TimerViewModel(timer: timer2, delegate: nil)
+let watchSyncManager = WatchSyncManager()
 
 #Preview {
 	List {
@@ -95,5 +127,7 @@ let timerViewModel2 = TimerViewModel(timer: timer2, delegate: nil)
 		TimerView(timerViewModel: timerViewModel2)
 			.listRowBackground(Color.clear)
 	}
+	.scrollContentBackground(.hidden)
 	.background(.black)
+	.environmentObject(watchSyncManager)
 }

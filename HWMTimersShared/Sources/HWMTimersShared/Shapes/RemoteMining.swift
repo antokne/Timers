@@ -7,15 +7,11 @@
 
 import SwiftUI
 
-struct RemoteMining: Shape {
+public struct RemoteMining: Shape {
 
-	
-	
-	func path(in rect: CGRect) -> Path {
+	public func path(in rect: CGRect) -> Path {
 		
 		// this is a calc for length of side of a hexagon.
-
-		
 		
 		// draw from the center of our rectangle
 		let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
@@ -81,9 +77,14 @@ struct RemoteMining: Shape {
 }
 
 // Draw our star shape in a view
-struct RemoteMiningView: View {
+public struct RemoteMiningView: View {
 	var forgroundColor: Color
-	var body: some View {
+	
+	public init(forgroundColor: Color) {
+		self.forgroundColor = forgroundColor
+	}
+	
+	public var body: some View {
 		ZStack {
 			Canvas { context, size in
 				

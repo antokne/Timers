@@ -9,9 +9,14 @@ import SwiftUI
 
 
 // Draw our star shape in a view
-struct ResearchView: View {
+public struct ResearchView: View {
 	var forgroundColor: Color
-	var body: some View {
+	
+	public init(forgroundColor: Color) {
+		self.forgroundColor = forgroundColor
+	}
+	
+	public var body: some View {
 		GeometryReader { geometry in
 			ZStack {
 				Circle()

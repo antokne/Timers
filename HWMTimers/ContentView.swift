@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HWMTimersShared
 
 struct ContentView: View {
 	@EnvironmentObject private var watchSyncManager: WatchSyncManager
@@ -45,7 +46,7 @@ struct ContentView: View {
 					Spacer()
 				}
 				
-				TheStarsLikeDustView()
+				TheStarsLikeDustView(fillColor: .homeworld.blue)
 				
 				VStack {
 
@@ -113,5 +114,6 @@ struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		ContentView(assignmentViewModel: assignmentViewModel, timersViewModel: timersViewModel)
 			.environmentObject(watchSyncManager)
+
 	}
 }

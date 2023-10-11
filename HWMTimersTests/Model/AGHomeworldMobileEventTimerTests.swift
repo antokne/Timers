@@ -31,7 +31,7 @@ final class AGHomeworldMobileEventTimerTests: XCTestCase {
 	
 	func testTimersDaily() throws {
 		
-		let timer = AGHomeworldMobileEventTimer(name: "Daily Market", type: HomeworldMobileEventType.daily(start: TimeOfDay(hour: 2, minute: 0)))
+		let timer = AGHomeworldMobileEvent(name: "Daily Market", type: AGHomeworldMobileEventType.daily(start: TimeOfDay(hour: 2, minute: 0)))
 		XCTAssertEqual(timer.name, "Daily Market")
 		
 		let startDate = timer.type.nextStartDate()
@@ -51,8 +51,8 @@ final class AGHomeworldMobileEventTimerTests: XCTestCase {
 	
 	func testTimerWeekDay() throws {
 		
-		let timer = AGHomeworldMobileEventTimer(name: "Daily Rep liason",
-							type: HomeworldMobileEventType.day(weekDay: .tuesday, start: TimeOfDay(hour: 0, minute: 0)))
+		let timer = AGHomeworldMobileEvent(name: "Daily Rep liason",
+							type: AGHomeworldMobileEventType.day(weekDay: .tuesday, start: TimeOfDay(hour: 0, minute: 0)))
 		XCTAssertEqual(timer.name, "Daily Rep liason")
 		
 		// should always be in the future!
@@ -70,8 +70,8 @@ final class AGHomeworldMobileEventTimerTests: XCTestCase {
 	
 	func testTimerWeekly() throws {
 		
-		let timer = AGHomeworldMobileEventTimer(name: "Weekly Market",
-							type: HomeworldMobileEventType.weekly(weekDay: .monday,
+		let timer = AGHomeworldMobileEvent(name: "Weekly Market",
+							type: AGHomeworldMobileEventType.weekly(weekDay: .monday,
 												   start: TimeOfDay(hour: 2, minute: 0)))
 		XCTAssertEqual(timer.name, "Weekly Market")
 		
@@ -91,8 +91,8 @@ final class AGHomeworldMobileEventTimerTests: XCTestCase {
 	
 	func testTimerEvent() throws {
 		
-		let timer = AGHomeworldMobileEventTimer(name: "Weekend Event",
-							type: HomeworldMobileEventType.event(weekDay: .friday,
+		let timer = AGHomeworldMobileEvent(name: "Weekend Event",
+							type: AGHomeworldMobileEventType.event(weekDay: .friday,
 												  start: TimeOfDay(hour: 11, minute: 0),
 												  durationDays: 3))
 		XCTAssertEqual(timer.name, "Weekend Event")

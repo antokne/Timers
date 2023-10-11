@@ -3,41 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E4080D8C2ABCEDFF00601A37 /* TheStarsLikeDustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4080D8B2ABCEDFF00601A37 /* TheStarsLikeDustView.swift */; };
-		E4080D8E2ABCEE4400601A37 /* StarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4080D8D2ABCEE4400601A37 /* StarsModel.swift */; };
-		E4080D8F2ABCF08D00601A37 /* StarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4080D8D2ABCEE4400601A37 /* StarsModel.swift */; };
-		E4080D902ABCF09100601A37 /* TheStarsLikeDustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4080D8B2ABCEDFF00601A37 /* TheStarsLikeDustView.swift */; };
-		E4080D922ABCFB0800601A37 /* Research.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4080D912ABCFB0800601A37 /* Research.swift */; };
-		E4080D932ABCFB0800601A37 /* Research.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4080D912ABCFB0800601A37 /* Research.swift */; };
 		E4080D942ABD0EFC00601A37 /* Michroma-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4FABD8F2A9D9B2F00C93EA8 /* Michroma-Regular.ttf */; };
-		E45376792AA0127900BFA32C /* BevelledCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376782AA0127900BFA32C /* BevelledCorner.swift */; };
 		E453767C2AA0485700BFA32C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453767B2AA0485700BFA32C /* SettingsView.swift */; };
 		E453767E2AA04B9B00BFA32C /* TimerNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453767D2AA04B9B00BFA32C /* TimerNotificationService.swift */; };
-		E45376812AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376802AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift */; };
-		E45376832AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376822AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift */; };
-		E45376852AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376842AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift */; };
-		E4758AE82AD3741900FFED40 /* AGHomeworldMobileTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4758AE72AD3741900FFED40 /* AGHomeworldMobileTimer.swift */; };
-		E4758AE92AD3757F00FFED40 /* AGHomeworldMobileTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4758AE72AD3741900FFED40 /* AGHomeworldMobileTimer.swift */; };
 		E4758B072AD4DF0F00FFED40 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4758B062AD4DF0F00FFED40 /* TimerView.swift */; };
 		E4758B082AD4DF0F00FFED40 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4758B062AD4DF0F00FFED40 /* TimerView.swift */; };
 		E4758B092AD4E0BD00FFED40 /* TimersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD0D602AB7CEE7003FD5BC /* TimersViewModel.swift */; };
 		E4758B0B2AD4E19600FFED40 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4758B0A2AD4E19600FFED40 /* TimerViewModel.swift */; };
 		E4758B0C2AD4E19600FFED40 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4758B0A2AD4E19600FFED40 /* TimerViewModel.swift */; };
-		E47F56642AC0F7F200C55597 /* BevelledCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376782AA0127900BFA32C /* BevelledCorner.swift */; };
 		E47F56662AC1014500C55597 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F56652AC1014500C55597 /* SettingsViewModel.swift */; };
-		E47F56692AC106C600C55597 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F56682AC106C600C55597 /* Constants.swift */; };
-		E47F566A2AC106D000C55597 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F56682AC106C600C55597 /* Constants.swift */; };
-		E47F566C2AC1114900C55597 /* WatchSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F566B2AC1114900C55597 /* WatchSyncManager.swift */; };
-		E47F566D2AC1114900C55597 /* WatchSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F566B2AC1114900C55597 /* WatchSyncManager.swift */; };
-		E48EF9492AB817720086B159 /* SimpleGrantNotificationAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376802AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift */; };
-		E48EF94A2AB817720086B159 /* SimpleGrantAccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45376822AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift */; };
-		E4A63F342AB2C8B1005B47CB /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD812A9C510600C93EA8 /* Star.swift */; };
-		E4A63F362AB3FA4F005B47CB /* RemoteMining.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A63F352AB3FA4F005B47CB /* RemoteMining.swift */; };
-		E4A63F372AB3FA53005B47CB /* RemoteMining.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A63F352AB3FA4F005B47CB /* RemoteMining.swift */; };
 		E4AD0D612AB7CEE7003FD5BC /* TimersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD0D602AB7CEE7003FD5BC /* TimersViewModel.swift */; };
 		E4AD0D652AB7E32D003FD5BC /* NiceNotifications in Frameworks */ = {isa = PBXBuildFile; productRef = E4AD0D642AB7E32D003FD5BC /* NiceNotifications */; };
 		E4AD0D662AB7E6BA003FD5BC /* HWMTimerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD932A9D9D4D00C93EA8 /* HWMTimerTheme.swift */; };
@@ -50,6 +28,8 @@
 		E4D2C4182AB2BBE9005FD6F4 /* HWMTimers_Watch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C4172AB2BBE9005FD6F4 /* HWMTimers_Watch_Watch_AppUITestsLaunchTests.swift */; };
 		E4D2C41B2AB2BBE9005FD6F4 /* HWMTimersWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E4D2C3F82AB2BBE8005FD6F4 /* HWMTimersWatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E4EC3E362AA68E72003B0E3B /* AGEventTimersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC3E352AA68E72003B0E3B /* AGEventTimersTests.swift */; };
+		E4F55C052AD73F3D0025C3C5 /* HWMTimersShared in Frameworks */ = {isa = PBXBuildFile; productRef = E4F55C042AD73F3D0025C3C5 /* HWMTimersShared */; };
+		E4F55C072AD73F610025C3C5 /* HWMTimersShared in Frameworks */ = {isa = PBXBuildFile; productRef = E4F55C062AD73F610025C3C5 /* HWMTimersShared */; };
 		E4FABD532A9C41B300C93EA8 /* HWMTimersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD522A9C41B300C93EA8 /* HWMTimersApp.swift */; };
 		E4FABD552A9C41B300C93EA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD542A9C41B300C93EA8 /* ContentView.swift */; };
 		E4FABD572A9C41B300C93EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FABD562A9C41B300C93EA8 /* Assets.xcassets */; };
@@ -57,8 +37,6 @@
 		E4FABD642A9C41B300C93EA8 /* HWMTimersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD632A9C41B300C93EA8 /* HWMTimersTests.swift */; };
 		E4FABD6E2A9C41B400C93EA8 /* HWMTimersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD6D2A9C41B400C93EA8 /* HWMTimersUITests.swift */; };
 		E4FABD702A9C41B400C93EA8 /* HWMTimersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD6F2A9C41B400C93EA8 /* HWMTimersUITestsLaunchTests.swift */; };
-		E4FABD7E2A9C4BE600C93EA8 /* AGEventTimers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD7D2A9C4BE600C93EA8 /* AGEventTimers.swift */; };
-		E4FABD822A9C510600C93EA8 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD812A9C510600C93EA8 /* Star.swift */; };
 		E4FABD882A9D56C200C93EA8 /* AGHomeworldMobileEventTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD872A9D56C200C93EA8 /* AGHomeworldMobileEventTimerTests.swift */; };
 		E4FABD8B2A9D810400C93EA8 /* AssignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD8A2A9D810400C93EA8 /* AssignmentView.swift */; };
 		E4FABD8D2A9D823700C93EA8 /* AGAssignmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD8C2A9D823700C93EA8 /* AGAssignmentViewModel.swift */; };
@@ -119,25 +97,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E4080D8B2ABCEDFF00601A37 /* TheStarsLikeDustView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheStarsLikeDustView.swift; sourceTree = "<group>"; };
-		E4080D8D2ABCEE4400601A37 /* StarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsModel.swift; sourceTree = "<group>"; };
-		E4080D912ABCFB0800601A37 /* Research.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Research.swift; sourceTree = "<group>"; };
 		E4080D952ABD11B800601A37 /* HWMTimers-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "HWMTimers-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
-		E45376782AA0127900BFA32C /* BevelledCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BevelledCorner.swift; sourceTree = "<group>"; };
 		E453767B2AA0485700BFA32C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E453767D2AA04B9B00BFA32C /* TimerNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNotificationService.swift; sourceTree = "<group>"; };
-		E45376802AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGrantNotificationAccessView.swift; sourceTree = "<group>"; };
-		E45376822AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGrantAccessViewModel.swift; sourceTree = "<group>"; };
-		E45376842AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WillEnterForegroundEventModifier.swift; sourceTree = "<group>"; };
-		E4758AE72AD3741900FFED40 /* AGHomeworldMobileTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGHomeworldMobileTimer.swift; sourceTree = "<group>"; };
 		E4758B062AD4DF0F00FFED40 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		E4758B0A2AD4E19600FFED40 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		E4758B0D2AD6138300FFED40 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E47F56652AC1014500C55597 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		E47F56682AC106C600C55597 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E47F566B2AC1114900C55597 /* WatchSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncManager.swift; sourceTree = "<group>"; };
 		E48EF9462AB80A9E0086B159 /* HWMTimers Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HWMTimers Watch App.entitlements"; sourceTree = "<group>"; };
-		E4A63F352AB3FA4F005B47CB /* RemoteMining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteMining.swift; sourceTree = "<group>"; };
 		E4AD0D602AB7CEE7003FD5BC /* TimersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersViewModel.swift; sourceTree = "<group>"; };
 		E4D2C3F82AB2BBE8005FD6F4 /* HWMTimersWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWMTimersWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2C3FA2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimers_WatchApp.swift; sourceTree = "<group>"; };
@@ -151,6 +118,7 @@
 		E4D2C4172AB2BBE9005FD6F4 /* HWMTimers_Watch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimers_Watch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E4EC3E352AA68E72003B0E3B /* AGEventTimersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGEventTimersTests.swift; sourceTree = "<group>"; };
 		E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		E4F55C022AD73F080025C3C5 /* HWMTimersShared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HWMTimersShared; sourceTree = "<group>"; };
 		E4FABD4F2A9C41B300C93EA8 /* HWMTimers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWMTimers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FABD522A9C41B300C93EA8 /* HWMTimersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimersApp.swift; sourceTree = "<group>"; };
 		E4FABD542A9C41B300C93EA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -161,8 +129,6 @@
 		E4FABD692A9C41B400C93EA8 /* HWMTimersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HWMTimersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FABD6D2A9C41B400C93EA8 /* HWMTimersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimersUITests.swift; sourceTree = "<group>"; };
 		E4FABD6F2A9C41B400C93EA8 /* HWMTimersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimersUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E4FABD7D2A9C4BE600C93EA8 /* AGEventTimers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGEventTimers.swift; sourceTree = "<group>"; };
-		E4FABD812A9C510600C93EA8 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		E4FABD872A9D56C200C93EA8 /* AGHomeworldMobileEventTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGHomeworldMobileEventTimerTests.swift; sourceTree = "<group>"; };
 		E4FABD8A2A9D810400C93EA8 /* AssignmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentView.swift; sourceTree = "<group>"; };
 		E4FABD8C2A9D823700C93EA8 /* AGAssignmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAssignmentViewModel.swift; sourceTree = "<group>"; };
@@ -176,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F55C072AD73F610025C3C5 /* HWMTimersShared in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F55C052AD73F3D0025C3C5 /* HWMTimersShared in Frameworks */,
 				E4AD0D652AB7E32D003FD5BC /* NiceNotifications in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,17 +186,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E45376772AA0123E00BFA32C /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				E4A63F352AB3FA4F005B47CB /* RemoteMining.swift */,
-				E4080D912ABCFB0800601A37 /* Research.swift */,
-				E4FABD812A9C510600C93EA8 /* Star.swift */,
-				E45376782AA0127900BFA32C /* BevelledCorner.swift */,
-			);
-			path = Shapes;
-			sourceTree = "<group>";
-		};
 		E453767A2AA0484000BFA32C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,24 +193,6 @@
 				E47F56652AC1014500C55597 /* SettingsViewModel.swift */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		E453767F2AA53B4D00BFA32C /* GrantNotifications */ = {
-			isa = PBXGroup;
-			children = (
-				E45376822AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift */,
-				E45376802AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift */,
-			);
-			path = GrantNotifications;
-			sourceTree = "<group>";
-		};
-		E47F56672AC106BA00C55597 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				E47F56682AC106C600C55597 /* Constants.swift */,
-				E47F566B2AC1114900C55597 /* WatchSyncManager.swift */,
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		E4D2C3F92AB2BBE8005FD6F4 /* HWMTimers Watch App */ = {
@@ -296,6 +235,7 @@
 		E4FABD462A9C41B300C93EA8 = {
 			isa = PBXGroup;
 			children = (
+				E4F55C022AD73F080025C3C5 /* HWMTimersShared */,
 				E4758B0D2AD6138300FFED40 /* README.md */,
 				E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */,
 				E48EF9462AB80A9E0086B159 /* HWMTimers Watch App.entitlements */,
@@ -325,9 +265,7 @@
 		E4FABD512A9C41B300C93EA8 /* HWMTimers */ = {
 			isa = PBXGroup;
 			children = (
-				E47F56672AC106BA00C55597 /* Shared */,
 				E453767A2AA0484000BFA32C /* Settings */,
-				E45376772AA0123E00BFA32C /* Shapes */,
 				E4FABD922A9D9D3F00C93EA8 /* Extensions */,
 				E4FABD892A9D80F600C93EA8 /* Views */,
 				E4FABD7C2A9C4BBA00C93EA8 /* Model */,
@@ -370,11 +308,8 @@
 		E4FABD7C2A9C4BBA00C93EA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E4FABD7D2A9C4BE600C93EA8 /* AGEventTimers.swift */,
 				E4FABD8C2A9D823700C93EA8 /* AGAssignmentViewModel.swift */,
 				E453767D2AA04B9B00BFA32C /* TimerNotificationService.swift */,
-				E4080D8D2ABCEE4400601A37 /* StarsModel.swift */,
-				E4758AE72AD3741900FFED40 /* AGHomeworldMobileTimer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -395,8 +330,6 @@
 				E4AD0D602AB7CEE7003FD5BC /* TimersViewModel.swift */,
 				E4758B0A2AD4E19600FFED40 /* TimerViewModel.swift */,
 				E4758B062AD4DF0F00FFED40 /* TimerView.swift */,
-				E453767F2AA53B4D00BFA32C /* GrantNotifications */,
-				E4080D8B2ABCEDFF00601A37 /* TheStarsLikeDustView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -405,7 +338,6 @@
 			isa = PBXGroup;
 			children = (
 				E4FABD932A9D9D4D00C93EA8 /* HWMTimerTheme.swift */,
-				E45376842AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -426,6 +358,9 @@
 			dependencies = (
 			);
 			name = "HWMTimers Watch App";
+			packageProductDependencies = (
+				E4F55C062AD73F610025C3C5 /* HWMTimersShared */,
+			);
 			productName = "HWMTimers Watch Watch App";
 			productReference = E4D2C3F82AB2BBE8005FD6F4 /* HWMTimersWatchApp.app */;
 			productType = "com.apple.product-type.application";
@@ -483,6 +418,7 @@
 			name = HWMTimers;
 			packageProductDependencies = (
 				E4AD0D642AB7E32D003FD5BC /* NiceNotifications */,
+				E4F55C042AD73F3D0025C3C5 /* HWMTimersShared */,
 			);
 			productName = HWMTimers;
 			productReference = E4FABD4F2A9C41B300C93EA8 /* HWMTimers.app */;
@@ -569,6 +505,7 @@
 			mainGroup = E4FABD462A9C41B300C93EA8;
 			packageReferences = (
 				E4AD0D632AB7E32D003FD5BC /* XCRemoteSwiftPackageReference "NiceNotifications" */,
+				E4F55C032AD73F3D0025C3C5 /* XCLocalSwiftPackageReference "HWMTimersShared" */,
 			);
 			productRefGroup = E4FABD502A9C41B300C93EA8 /* Products */;
 			projectDirPath = "";
@@ -640,23 +577,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4A63F342AB2C8B1005B47CB /* Star.swift in Sources */,
-				E4080D902ABCF09100601A37 /* TheStarsLikeDustView.swift in Sources */,
 				E4D2C3FD2AB2BBE8005FD6F4 /* ContentView.swift in Sources */,
-				E47F56642AC0F7F200C55597 /* BevelledCorner.swift in Sources */,
-				E4080D8F2ABCF08D00601A37 /* StarsModel.swift in Sources */,
-				E48EF9492AB817720086B159 /* SimpleGrantNotificationAccessView.swift in Sources */,
 				E4758B082AD4DF0F00FFED40 /* TimerView.swift in Sources */,
 				E4AD0D662AB7E6BA003FD5BC /* HWMTimerTheme.swift in Sources */,
-				E47F566A2AC106D000C55597 /* Constants.swift in Sources */,
-				E4080D932ABCFB0800601A37 /* Research.swift in Sources */,
-				E4758AE92AD3757F00FFED40 /* AGHomeworldMobileTimer.swift in Sources */,
-				E47F566D2AC1114900C55597 /* WatchSyncManager.swift in Sources */,
 				E4758B0C2AD4E19600FFED40 /* TimerViewModel.swift in Sources */,
 				E4D2C3FB2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift in Sources */,
 				E4AD0D612AB7CEE7003FD5BC /* TimersViewModel.swift in Sources */,
-				E48EF94A2AB817720086B159 /* SimpleGrantAccessViewModel.swift in Sources */,
-				E4A63F372AB3FA53005B47CB /* RemoteMining.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,27 +609,14 @@
 			files = (
 				E4758B092AD4E0BD00FFED40 /* TimersViewModel.swift in Sources */,
 				E4FABD552A9C41B300C93EA8 /* ContentView.swift in Sources */,
-				E47F56692AC106C600C55597 /* Constants.swift in Sources */,
 				E4FABD532A9C41B300C93EA8 /* HWMTimersApp.swift in Sources */,
 				E4758B0B2AD4E19600FFED40 /* TimerViewModel.swift in Sources */,
-				E45376832AA53B9300BFA32C /* SimpleGrantAccessViewModel.swift in Sources */,
 				E453767E2AA04B9B00BFA32C /* TimerNotificationService.swift in Sources */,
-				E47F566C2AC1114900C55597 /* WatchSyncManager.swift in Sources */,
 				E4758B072AD4DF0F00FFED40 /* TimerView.swift in Sources */,
-				E4758AE82AD3741900FFED40 /* AGHomeworldMobileTimer.swift in Sources */,
 				E4FABD8B2A9D810400C93EA8 /* AssignmentView.swift in Sources */,
 				E453767C2AA0485700BFA32C /* SettingsView.swift in Sources */,
-				E45376852AA53C6700BFA32C /* WillEnterForegroundEventModifier.swift in Sources */,
-				E4080D922ABCFB0800601A37 /* Research.swift in Sources */,
-				E45376792AA0127900BFA32C /* BevelledCorner.swift in Sources */,
-				E45376812AA53B7800BFA32C /* SimpleGrantNotificationAccessView.swift in Sources */,
-				E4080D8E2ABCEE4400601A37 /* StarsModel.swift in Sources */,
 				E4FABD942A9D9D4D00C93EA8 /* HWMTimerTheme.swift in Sources */,
-				E4FABD7E2A9C4BE600C93EA8 /* AGEventTimers.swift in Sources */,
-				E4080D8C2ABCEDFF00601A37 /* TheStarsLikeDustView.swift in Sources */,
-				E4A63F362AB3FA4F005B47CB /* RemoteMining.swift in Sources */,
 				E4FABD8D2A9D823700C93EA8 /* AGAssignmentViewModel.swift in Sources */,
-				E4FABD822A9C510600C93EA8 /* Star.swift in Sources */,
 				E47F56662AC1014500C55597 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1226,6 +1139,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		E4F55C032AD73F3D0025C3C5 /* XCLocalSwiftPackageReference "HWMTimersShared" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = HWMTimersShared;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		E4AD0D632AB7E32D003FD5BC /* XCRemoteSwiftPackageReference "NiceNotifications" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -1242,6 +1162,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E4AD0D632AB7E32D003FD5BC /* XCRemoteSwiftPackageReference "NiceNotifications" */;
 			productName = NiceNotifications;
+		};
+		E4F55C042AD73F3D0025C3C5 /* HWMTimersShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HWMTimersShared;
+		};
+		E4F55C062AD73F610025C3C5 /* HWMTimersShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HWMTimersShared;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

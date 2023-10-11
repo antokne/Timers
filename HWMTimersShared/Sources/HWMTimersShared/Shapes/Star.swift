@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct Star: Shape {
+public struct Star: Shape {
 	// store how many corners the star has, and how smooth/pointed it is
 	let corners: Int
 	let smoothness: Double
 	
-	func path(in rect: CGRect) -> Path {
+	public func path(in rect: CGRect) -> Path {
 		// ensure we have at least two corners, otherwise send back an empty path
 		guard corners >= 2 else {
 			return Path()
@@ -83,8 +83,8 @@ struct Star: Shape {
 }
 
 // Draw our star shape in a view
-struct StarView: View {
-	var body: some View {
+public struct StarView: View {
+	public var body: some View {
 		ZStack {
 			Canvas { context, size in
 				//			Star(corners: 6, smoothness: 0.45)

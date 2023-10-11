@@ -9,6 +9,7 @@ import Foundation
 import UserNotifications
 import Combine
 import SwiftUI
+import HWMTimersShared
 
 protocol TimerNotificationProtocol: AnyObject {
 	func timerChanged()
@@ -26,11 +27,11 @@ class TimersViewModel : ObservableObject {
 	private var cancellable: AnyCancellable?
 	
 	init() {
-		var timerViewModel = TimerViewModel(timer: AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration: 4 * 60 * 60, type: .remoteMining, percentReduction: researchPercentBonus), delegate: self)
+		var timerViewModel = TimerViewModel(timer: AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration:[.hr4, .hr8], type: .remoteMining, percentReduction: researchPercentBonus), delegate: self)
 		
 		timerViewModels.append(timerViewModel)
 		
-		timerViewModel = TimerViewModel(timer: AGHomeworldMobileTimer(title: "Research", running: false, duration: 4 * 60 * 60, type: .research), delegate: self)
+		timerViewModel = TimerViewModel(timer: AGHomeworldMobileTimer(title: "Research", running: false, duration: [.hr4, .hr8], type: .research), delegate: self)
 		timerViewModels.append(timerViewModel)
 	}
 	

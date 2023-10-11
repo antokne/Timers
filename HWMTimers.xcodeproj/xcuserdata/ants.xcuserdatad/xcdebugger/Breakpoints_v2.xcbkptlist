@@ -158,8 +158,8 @@
             filePath = "HWMTimers/Model/TimerNotificationService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "update(timer:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +174,8 @@
             filePath = "HWMTimers/Model/TimerNotificationService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "HWMTimers/Model/AGAssignmentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "init(timerService:)"
             landmarkType = "7">
             <Locations>
@@ -268,8 +268,8 @@
             filePath = "HWMTimers/Views/AssignmentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -565,22 +565,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "488BB10A-2B1F-4993-A98A-EF9BD5D3502A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HWMTimers Watch App/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2CC8D5AA-B713-4E1C-94CE-AB56D58AA0E5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -604,8 +588,8 @@
             filePath = "HWMTimers/HWMTimersApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -699,8 +683,8 @@
             filePath = "HWMTimers/Views/TimerViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "startTimer()"
             landmarkType = "7">
             <Locations>
@@ -747,8 +731,8 @@
             filePath = "HWMTimers/Views/TimerViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "cancelTimer()"
             landmarkType = "7">
             <Locations>
@@ -810,8 +794,8 @@
             filePath = "HWMTimers/Views/TimersViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "timerAction()"
             landmarkType = "7">
             <Locations>
@@ -858,8 +842,8 @@
             filePath = "HWMTimers/Views/TimersViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "checkCurrentNotifications()"
             landmarkType = "7">
             <Locations>
@@ -921,10 +905,58 @@
             filePath = "HWMTimers/Views/TimersViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "update(timer:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55F9349A-ED63-4430-9B6E-1C5E3A15CF5E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers/Model/AGHomeworldMobileTimer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "startTimer(with:selectedDuration:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "55F9349A-ED63-4430-9B6E-1C5E3A15CF5E - 49cbcbc0fb2045c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimersWatchApp.AGHomeworldMobileTimer.startTimer(with: Swift.Int) -&gt; ()"
+                  moduleName = "HWMTimersWatchApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers/Model/AGHomeworldMobileTimer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "55F9349A-ED63-4430-9B6E-1C5E3A15CF5E - af9a079b27ceb133"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimersWatchApp.AGHomeworldMobileTimer.startTimer(with: Swift.Int, selectedDuration: HWMTimersWatchApp.AGHomeworldMobileTimerDuration) -&gt; ()"
+                  moduleName = "HWMTimersWatchApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers/Model/AGHomeworldMobileTimer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "280">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

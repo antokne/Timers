@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+#if os(iOS)
 public struct AGWillEnterForegroundViewModifier: ViewModifier {
 	let action: () -> Void
 	
@@ -28,3 +28,4 @@ extension View {
 		self.modifier(AGWillEnterForegroundViewModifier(action: action))
 	}
 }
+#endif
