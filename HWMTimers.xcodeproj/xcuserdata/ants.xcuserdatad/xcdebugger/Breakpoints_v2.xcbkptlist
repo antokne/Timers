@@ -190,8 +190,8 @@
             filePath = "HWMTimers/Model/AGAssignmentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "init(timerService:)"
             landmarkType = "7">
             <Locations>
@@ -957,6 +957,165 @@
                   offsetFromSymbolStart = "280">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAF55CF4-7F2E-47D3-8FAC-28027CA12FDC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers/Views/TimersViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "updateValues(applicationContext:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BAF55CF4-7F2E-47D3-8FAC-28027CA12FDC - 98b7daa8dbf5433f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimersWatchApp.TimersViewModel.updateValues(applicationContext: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "HWMTimersWatchApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers/Views/TimersViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "BAF55CF4-7F2E-47D3-8FAC-28027CA12FDC - 98b7daa8dbf5433f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimersWatchApp.TimersViewModel.updateValues(applicationContext: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "HWMTimersWatchApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimers/Views/TimersViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "624">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4BC0177-EEB9-41AE-8C22-9FCB0C1FD2CA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers/Views/TimersViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "listenForContextChanges(watchSyncManager:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3748F73D-F8A6-4A10-8C9C-3DE7CE8D2DC8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimers/Views/TimersViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "updateAppGroupData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A0F5F98-C4A2-41F7-9CB8-63F34A364D64"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimersShared/Sources/HWMTimersShared/Models/AGHomeworldMobileTimer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "init(title:running:duration:type:percentReduction:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9A0F5F98-C4A2-41F7-9CB8-63F34A364D64 - 74336d72fd7a3699"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimersShared.AGHomeworldMobileTimer.init(title: Swift.String, running: Swift.Bool, duration: Swift.Array&lt;HWMTimersShared.AGHomeworldMobileTimerDuration&gt;, type: HWMTimersShared.AGHomeworldMobileTimerType, percentReduction: Swift.Int) -&gt; HWMTimersShared.AGHomeworldMobileTimer"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimersShared/Sources/HWMTimersShared/Models/AGHomeworldMobileTimer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "688">
+               </Location>
+               <Location
+                  uuid = "9A0F5F98-C4A2-41F7-9CB8-63F34A364D64 - e51effb59b955479"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimersShared.AGHomeworldMobileTimer.init(title: Swift.String, running: Swift.Bool, duration: Swift.Array&lt;HWMTimersShared.AGHomeworldMobileTimerDuration&gt;, type: HWMTimersShared.AGHomeworldMobileTimerType, percentReduction: Swift.Int) -&gt; HWMTimersShared.AGHomeworldMobileTimer"
+                  moduleName = "HWMTimersWatchApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimersShared/Sources/HWMTimersShared/Models/AGHomeworldMobileTimer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "688">
+               </Location>
+               <Location
+                  uuid = "9A0F5F98-C4A2-41F7-9CB8-63F34A364D64 - 74336d72fd7a3699"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimersShared.AGHomeworldMobileTimer.init(title: Swift.String, running: Swift.Bool, duration: Swift.Array&lt;HWMTimersShared.AGHomeworldMobileTimerDuration&gt;, type: HWMTimersShared.AGHomeworldMobileTimerType, percentReduction: Swift.Int) -&gt; HWMTimersShared.AGHomeworldMobileTimer"
+                  moduleName = "HWMTimers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimersShared/Sources/HWMTimersShared/Models/AGHomeworldMobileTimer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "716">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6E25D57-6266-42CF-8483-322BE11C861C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimersShared/Sources/HWMTimersShared/Managers/WatchSyncManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "session(_:didReceiveApplicationContext:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

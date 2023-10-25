@@ -17,7 +17,6 @@ struct ContentView: View {
 	@StateObject var timersViewModel: TimersViewModel
 
 	@State var showingSettings = false
-	@Environment(\.colorScheme) var colorScheme: ColorScheme
 
 	var body: some View {
 		GeometryReader { geometry in
@@ -49,10 +48,12 @@ struct ContentView: View {
 				TheStarsLikeDustView(fillColor: .homeworld.blue)
 				
 				VStack {
-
 					List {
 						
-						SimpleGrantNotificationAccessView(viewModel: grantAccessViewModel, textForegroundFooterColour: .gray)
+						SimpleGrantNotificationAccessView(viewModel: grantAccessViewModel,
+														  textForegroundFooterColour: .gray,
+														  fontTitle: .homeworld.title3,
+														  fontBody: .homeworld.body)
 							.listRowBackground(Color.clear)
 
 						Text("TIMERS")
@@ -94,9 +95,6 @@ struct ContentView: View {
 				}
 			}
 			.background(Color.homeworld.background)
-		}
-		.onChange(of: colorScheme) { newValue in
-			print("colorScheme [\(colorScheme)] changed to \(newValue)")
 		}
 		.task {
 			await timersViewModel.checkCurrentNotifications()

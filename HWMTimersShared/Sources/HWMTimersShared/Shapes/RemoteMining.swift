@@ -16,57 +16,103 @@ public struct RemoteMining: Shape {
 		// draw from the center of our rectangle
 		let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
 		
-		// draw from the bottom left
-		let start = CGPoint(x: 3 * rect.width / 8, y: 0)
+		var horizontalScale = 30.0 / 113.0
+		var virticalScale = 60.0 / 121.0
+
+		// draw from the top left
+		let start = CGPoint(x: center.x - rect.width * horizontalScale * 0.5, y: 0)
 		
 		// we're ready to start with our path now
 		var path = Path()
 		
-		// move to our initial position
+		// Draw the top press thing
+		// move to our initial position top leftt
 		path.move(to: start)
 		
-		var point = CGPoint(x: 5 * rect.width / 8, y: 0)
+		// move to top right
+		var point = CGPoint(x: center.x + rect.width * horizontalScale * 0.5, y: 0)
 		path.addLine(to: point)
 		
-		point = CGPoint(x: 5 * rect.width / 8, y: rect.height / 2)
+		// move down
+		point = CGPoint(x: center.x + rect.width * horizontalScale * 0.5, y: rect.height * virticalScale)
 		path.addLine(to: point)
 		
-		point = CGPoint(x: 3 * rect.width / 4, y: rect.height / 2)
+		// move across
+		horizontalScale = 68.0 / 113.0
+		point = CGPoint(x: center.x + rect.width * horizontalScale * 0.5, y: rect.height * virticalScale)
 		path.addLine(to: point)
 		
-		point = CGPoint(x: 3 * rect.width / 4, y: 3 * rect.height / 4)
+		// move down
+		let bottonHeightScale = 30.0 / 121
+		point = CGPoint(x: center.x + rect.width * horizontalScale * 0.5, y: rect.height * virticalScale + rect.height * bottonHeightScale)
 		path.addLine(to: point)
 		
-		point = CGPoint(x: 1 * rect.width / 4, y: 3 * rect.height / 4)
+		// move to left
+		point = CGPoint(x: center.x - rect.width * horizontalScale * 0.5, y: rect.height * virticalScale + rect.height * bottonHeightScale)
 		path.addLine(to: point)
 		
-		point = CGPoint(x: 1 * rect.width / 4, y: rect.height / 2)
+		// move UP
+		point = CGPoint(x: center.x - rect.width * horizontalScale * 0.5, y: rect.height * virticalScale)
 		path.addLine(to: point)
 		
-		point = CGPoint(x: 3 * rect.width / 8, y: rect.height / 2)
+		// move to right
+		horizontalScale = 30.0 / 113.0
+		point = CGPoint(x: center.x - rect.width * horizontalScale * 0.5 , y: rect.height * virticalScale)
 		path.addLine(to: point)
 		
 		// close it
 		path.addLine(to: start)
 		
-		let triangleStart = CGPoint(x: 1 * rect.width / 4, y: 5 + 3 * rect.height / 4)
+		// Triangle
+		horizontalScale = 60.0 / 113.0
+		virticalScale = 38.0 / 121.0
+
+		// top left
+		let triangleStart = CGPoint(x: center.x - rect.width * horizontalScale * 0.5, y: center.y + rect.height * virticalScale)
 		path.move(to: triangleStart)
-		path.addLine(to: CGPoint(x: 3 * rect.width / 4, y: 5 + 3 * rect.height / 4))
-		path.addLine(to: CGPoint(x: rect.width / 2, y: rect.height))
+		
+		// move to right
+		point = CGPoint(x: center.x + rect.width * horizontalScale * 0.5, y: center.y + rect.height * virticalScale)
+		path.addLine(to: point)
+		
+		// move to bottom middle
+		virticalScale = 61.0 / 121.0
+		point = CGPoint(x: center.x, y: center.y + rect.height * virticalScale)
+		path.addLine(to: point)
+
+		// back to start
 		path.addLine(to: triangleStart)
 
-		let p1Start = CGPoint(x: 4 + 1 * rect.width / 8 , y: 15 + 3 * rect.height / 4)
+		// left side parallelagram
+		horizontalScale = 23.0 / 113
+		virticalScale = 47.0 / 121.0
+		let p1Start = CGPoint(x: 0, y: center.y + rect.height * virticalScale)
 		path.move(to: p1Start)
-		path.addLine(to: CGPoint(x: 4 + 2 * rect.width / 8 , y: 15 + 3 * rect.height / 4))
-		path.addLine(to: CGPoint(x: rect.width / 2 - 2, y: rect.height + 5))
-		path.addLine(to: CGPoint(x: 3 * rect.width / 8 - 2, y: rect.height + 5))
+		
+		// move to right
+		let bottomHorizontalScale = 13.5 / 113
+		path.addLine(to: CGPoint(x: rect.width * horizontalScale , y: center.y + rect.height * virticalScale))
+		
+		// move to bottom right
+		path.addLine(to: CGPoint(x: center.x - rect.width * bottomHorizontalScale, y: rect.height))
+		
+		// move to bottom left
+		path.addLine(to: CGPoint(x: center.x - rect.width * horizontalScale - rect.width * bottomHorizontalScale, y: rect.height))
 		path.move(to: p1Start)
 
-		let p2Start = CGPoint(x: 6 * rect.width / 8 - 4, y: 15 + 3 * rect.height / 4)
+		// Right side Parallelagram
+		// move to top left
+		let p2Start = CGPoint(x: rect.width - rect.width * horizontalScale, y: center.y + rect.height * virticalScale)
 		path.move(to: p2Start)
-		path.addLine(to: CGPoint(x: 7 * rect.width / 8 - 4, y: 15 + 3 * rect.height / 4))
-		path.addLine(to: CGPoint(x: 2 + 5 * rect.width / 8 , y: rect.height + 5))
-		path.addLine(to: CGPoint(x: 2 + rect.width / 2  , y: rect.height + 5))
+		
+		// move to right
+		path.addLine(to: CGPoint(x: rect.width , y: center.y + rect.height * virticalScale))
+		
+		// move to bottom right
+		path.addLine(to: CGPoint(x: center.x + rect.width * horizontalScale + rect.width * bottomHorizontalScale , y: rect.height))
+		
+		// move to bottom left
+		path.addLine(to: CGPoint(x:  center.x + rect.width * bottomHorizontalScale , y: rect.height))
 
 		path.move(to: p2Start)
 
@@ -99,12 +145,12 @@ public struct RemoteMiningView: View {
 
 struct RemoteMining_Previews: PreviewProvider {
 	static var previews: some View {
-		VStack {
-			RemoteMiningView(forgroundColor: .blue)
-				.frame(width: 50, height: 50)
-				.background(.green)
-			Text("Hello")
-				.foregroundColor(.white)
+		ZStack {
+			RemoteMiningView(forgroundColor: .white)
+				.frame(width: 150, height: 150)
+				//.border(.red)
+				.clipped()
 		}
+		.background(.black)
 	}
 }

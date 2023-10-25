@@ -14,6 +14,7 @@ class SettingsViewModel: ObservableObject {
 	
 	//@Published var researchPercentBonus: Int = 0
 
-	@AppStorage(SettingsResearchPercentBonusKey) var researchPercentBonus: Int = 0
+//	@AppStorage(SettingsResearchPercentBonusKey) var researchPercentBonus: Int = 0
+	@AppStorage(SettingsProcessSpeedKey) var researchProcessSpeed: Int = 100
 
 }

@@ -18,9 +18,8 @@ public class AGAssignmentViewModel: ObservableObject {
 	var eventTimers = AGEventTimers()
 	
 	@Published var timers: [AGHomeworldMobileTimer] = []
-	@AppStorage(SettingsResearchPercentBonusKey) var researchPercentBonus: Int = 0
+	@AppStorage(SettingsProcessSpeedKey) var researchProcessSpeed: Int = 100
 
-	
 	init(timerService: TimerNotificationService) {
 
 		self.timerService = timerService
@@ -53,7 +52,7 @@ public class AGAssignmentViewModel: ObservableObject {
 			updateAssignments(eventTimers.events)
 		}
 		
-		timers.append(AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration: [.hr4, .hr8], type: .remoteMining, percentReduction: researchPercentBonus))
+		timers.append(AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration: [.hr4, .hr8], type: .remoteMining, percentReduction: 100 - researchProcessSpeed))
 		timers.append(AGHomeworldMobileTimer(title: "Research", running: false, duration: [.hr4, .hr8], type: .research))
 		
 	}

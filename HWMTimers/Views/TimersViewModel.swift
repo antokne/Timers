@@ -22,12 +22,12 @@ class TimersViewModel : ObservableObject {
 	
 	private var timerCancellable: AnyCancellable?
 	
-	@AppStorage(SettingsResearchPercentBonusKey) var researchPercentBonus: Int = 0
+	@AppStorage(SettingsProcessSpeedKey) var researchProcessSpeed: Int = 100
 
 	private var cancellable: AnyCancellable?
 	
 	init() {
-		var timerViewModel = TimerViewModel(timer: AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration:[.hr4, .hr8], type: .remoteMining, percentReduction: researchPercentBonus), delegate: self)
+		var timerViewModel = TimerViewModel(timer: AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration:[.hr4, .hr8], type: .remoteMining, percentReduction: 100 - researchProcessSpeed), delegate: self)
 		
 		timerViewModels.append(timerViewModel)
 		
@@ -120,9 +120,9 @@ class TimersViewModel : ObservableObject {
 	
 	private func updateValues(applicationContext: [String : Any]) {
 		
-		if let researchPercentBonus = applicationContext[SettingsResearchPercentBonusKey] as? Int {
-			self.researchPercentBonus = researchPercentBonus
-			print("researchPercentBonus = \(researchPercentBonus)")
+		if let researchProcessSpeed = applicationContext[SettingsProcessSpeedKey] as? Int {
+			self.researchProcessSpeed = researchProcessSpeed
+			print("researchProcessSpeed = \(researchProcessSpeed)")
 		}
 		
 		if let changedTimerData = applicationContext[TimerChangedEventKey] as? Data,
@@ -152,9 +152,26 @@ extension TimersViewModel: TimerNotificationProtocol {
 	
 	func timerChanged() {
 		checkCurrentTimers()
+		updateAppGroupData()
 	}
 	
 	
 }
 
+extension TimersViewModel {
+	
+	func updateAppGroupData() {
+		
+		let timers = timerViewModels.map { $0.timer }
+		let data = timers.asJSONData()
+		do {
+			try data?.write(to: WidgetSyncManager.timersURL, options: .atomic)
+		}
+		catch {
+			print("Failed to write to file: \(error)")
+		}
+		
+		WidgetSyncManager.reloadTimerWidget()
+	}
+}
 

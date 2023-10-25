@@ -20,19 +20,19 @@ struct SettingsView: View {
 		NavigationStack {
 			List {
 				Section {
-					Stepper(value: $viewModel.researchPercentBonus, in:  0...100) {
+					Stepper(value: $viewModel.researchProcessSpeed, in:  0...100) {
 						HStack {
 							ResearchView(forgroundColor: .accentColor)
 								.frame(width: 20)
-							Text("Research \(viewModel.researchPercentBonus)%")
+							Text(String(format: "Process Speed %0.2f", Double(viewModel.researchProcessSpeed) / 100.0))
 						}
 					}
-					.onChange(of: viewModel.researchPercentBonus) { newValue in
+					.onChange(of: viewModel.researchProcessSpeed) { newValue in
 						researchPercentBonusChanged()
 					}
 					
 				} header: {
-					Text("Adjust bonus %")
+					Text("Bonuses")
 				}
 				
 				Section {
@@ -73,7 +73,7 @@ struct SettingsView: View {
 	
 	func researchPercentBonusChanged() {
 		do {
-			try watchSyncManager.updateApplicationContext([SettingsResearchPercentBonusKey: viewModel.researchPercentBonus])
+			try watchSyncManager.updateApplicationContext([SettingsProcessSpeedKey: viewModel.researchProcessSpeed])
 		}
 		catch {
 			print("updating other application failed: \(error)")
@@ -82,9 +82,11 @@ struct SettingsView: View {
 }
 
 struct SettingsView_Previews: PreviewProvider {
+	static var watchSyncManager = WatchSyncManager()
 	static var previews: some View {
 		NavigationStack {
 			SettingsView()
+				.environmentObject(watchSyncManager)
 		}
 	}
 }

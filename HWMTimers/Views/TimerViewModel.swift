@@ -18,7 +18,7 @@ class TimerViewModel : ObservableObject, Identifiable {
 
 	weak var delegate: TimerNotificationProtocol?
 
-	@AppStorage(SettingsResearchPercentBonusKey) var researchPercentBonus: Int = 0
+	@AppStorage(SettingsProcessSpeedKey) var researchProcessSpeed: Int = 100
 
 	init(timer: AGHomeworldMobileTimer, delegate: TimerNotificationProtocol?) {
 		self.timer = timer
@@ -49,7 +49,7 @@ class TimerViewModel : ObservableObject, Identifiable {
 		case .remoteMining:
 			return 0
 		case .research:
-			return researchPercentBonus
+			return (100 - researchProcessSpeed)
 		}
 	}
 }

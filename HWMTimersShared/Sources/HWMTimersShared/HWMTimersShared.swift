@@ -3,4 +3,5 @@
 
 
 /// App Storage key
-public let SettingsResearchPercentBonusKey = "Settings.researchPercentBonus"
+//public let SettingsResearchPercentBonusKey = "Settings.researchPercentBonus"
+public let SettingsProcessSpeedKey = "Settings.researchProcessSpeed"

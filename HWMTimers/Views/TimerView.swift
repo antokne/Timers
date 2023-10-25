@@ -36,24 +36,28 @@ struct TimerView: View {
 					Spacer()
 					Picker(selection: $timerViewModel.selectedDuration) {
 						ForEach(AGHomeworldMobileTimerDuration.allCases) { duration in
-							HStack {
-								Text(duration.name)
-									.font(.homeworld.body)
-									.foregroundColor(.homeworld.blue)
-									.padding(2)
-							}
+							Text(duration.name)
+								.font(.homeworld.bodyFixed)
+								.foregroundColor(.homeworld.blue)
+								.padding(2)
+//							Image(systemName: "\(duration.rawValue).circle.fill")
+//								.foregroundColor(.homeworld.blue)
 						}
 					} label: {
-//						Text("Duration")
-//							.foregroundColor(.homeworld.blue)
+						#if os(iOS)
+						Text("Select duration")
+							.foregroundColor(.homeworld.blue)
+						#endif
 					}
 					.modify { picker in
 						#if os(watchOS)
 							picker
+//							.padding(2)
 						#else
 							picker
+								.labelsHidden()
 								.pickerStyle(.menu)
-								.frame(width: 80, height: 40)
+								.frame(width: 85, height: 40)
 								.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
 						#endif
 					}

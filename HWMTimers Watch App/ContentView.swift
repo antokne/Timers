@@ -42,12 +42,6 @@ struct ContentView: View {
 		}
 		.background {
 			TheStarsLikeDustView(fillColor: .homeworld.blue)
-				.modify { picker in
-#if os(watchOS)
-#else
-						.background(Color.homeworld.background)
-#endif
-				}
 		}
 		.task {
 			await viewModel.checkCurrentNotifications()

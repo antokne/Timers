@@ -13,10 +13,10 @@ public enum AGHomeworldMobileTimerType: Int, Codable {
 	case research = 1
 }
 
-public enum AGHomeworldMobileTimerDuration: CaseIterable, Identifiable, Codable {
+public enum AGHomeworldMobileTimerDuration: Int, CaseIterable, Identifiable, Codable {
 	public var id: Self { self }
-	case hr4
-	case hr8
+	case hr4 = 4
+	case hr8 = 8
 	
 	public var name: String {
 		switch self {
@@ -56,6 +56,9 @@ public struct AGHomeworldMobileTimer: Codable, Identifiable {
 		self.duration = duration
 		self.type = type
 		self.percentReduction = percentReduction
+		if running, let selectedDuration = duration.first {
+			startTimer(with: percentReduction, selectedDuration: selectedDuration)
+		}
 	}
 	
 	mutating public func startTimer(with percentReduction: Int, selectedDuration: AGHomeworldMobileTimerDuration) {
@@ -95,7 +98,7 @@ public struct AGHomeworldMobileTimer: Codable, Identifiable {
 		selectedDuration.duration - selectedDuration.duration * Double(percentReduction) / 100.0
 	}
 	
-	func durationRemaining() -> TimeInterval {
+	public func durationRemaining() -> TimeInterval {
 		guard let startDate else {
 			return 0
 		}
@@ -106,6 +109,10 @@ public struct AGHomeworldMobileTimer: Codable, Identifiable {
 	mutating func updateDurationLeft() {
 		let interval = durationRemaining()
 		formatedDurationLeft = interval.stringHoursMinutes()
+	}
+	
+	public var endDate: Date? {
+		startDate?.addingTimeInterval(adjustedDuration)
 	}
 	
 	func configureNotification(startDate: Date) {
@@ -190,5 +197,29 @@ extension TimeInterval {
 		let formatter = DateComponentsFormatter()
 		formatter.allowedUnits = [.hour, .minute, .second]
 		return formatter.string(from: self) ?? ""
+	}
+}
+
+extension AGHomeworldMobileTimer: Comparable {
+	
+	public static func < (lhs: AGHomeworldMobileTimer, rhs: AGHomeworldMobileTimer) -> Bool {
+		lhs.startDate ?? Date() < rhs.startDate ?? Date()
+	}
+	
+	
+}
+
+public extension AGHomeworldMobileTimer {
+	var widgetXOffset: Double {
+		switch durationRemaining() {
+		case 3600...:
+			return 2.0
+		case 600..<3600:
+			return 9.0
+		case ..<600:
+			return 12.5
+		default:
+			return 0.9
+		}
 	}
 }
