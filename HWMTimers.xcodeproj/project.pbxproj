@@ -20,7 +20,6 @@
 		E48497CE2ADE1AF800F12300 /* HWMTimersWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E48497BB2ADE0E3500F12300 /* HWMTimersWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E48497D42ADE1CCE00F12300 /* HWMTimersShared in Frameworks */ = {isa = PBXBuildFile; productRef = E48497D32ADE1CCE00F12300 /* HWMTimersShared */; };
 		E4AD0D652AB7E32D003FD5BC /* NiceNotifications in Frameworks */ = {isa = PBXBuildFile; productRef = E4AD0D642AB7E32D003FD5BC /* NiceNotifications */; };
-		E4AD0D662AB7E6BA003FD5BC /* HWMTimerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD932A9D9D4D00C93EA8 /* HWMTimerTheme.swift */; };
 		E4D2C3FB2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C3FA2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift */; };
 		E4D2C3FD2AB2BBE8005FD6F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C3FC2AB2BBE8005FD6F4 /* ContentView.swift */; };
 		E4D2C3FF2AB2BBE9005FD6F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D2C3FE2AB2BBE9005FD6F4 /* Assets.xcassets */; };
@@ -51,7 +50,6 @@
 		E4FABD8B2A9D810400C93EA8 /* AssignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD8A2A9D810400C93EA8 /* AssignmentView.swift */; };
 		E4FABD8D2A9D823700C93EA8 /* AGAssignmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD8C2A9D823700C93EA8 /* AGAssignmentViewModel.swift */; };
 		E4FABD902A9D9B2F00C93EA8 /* Michroma-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4FABD8F2A9D9B2F00C93EA8 /* Michroma-Regular.ttf */; };
-		E4FABD942A9D9D4D00C93EA8 /* HWMTimerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD932A9D9D4D00C93EA8 /* HWMTimerTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,7 +191,6 @@
 		E4FABD8C2A9D823700C93EA8 /* AGAssignmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAssignmentViewModel.swift; sourceTree = "<group>"; };
 		E4FABD8F2A9D9B2F00C93EA8 /* Michroma-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Michroma-Regular.ttf"; sourceTree = "<group>"; };
 		E4FABD912A9D9CEA00C93EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		E4FABD932A9D9D4D00C93EA8 /* HWMTimerTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimerTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +274,7 @@
 		E48497BE2ADE0E3500F12300 /* HWMTimersWatchWidget */ = {
 			isa = PBXGroup;
 			children = (
+				E48497D22ADE1BD300F12300 /* HWMTimersWatchWidgetExtension.entitlements */,
 				E48497BF2ADE0E3500F12300 /* HWMTimersWatchWidget.swift */,
 				E48497C12ADE0E3500F12300 /* AppIntent.swift */,
 				E48497C32ADE0E3600F12300 /* Assets.xcassets */,
@@ -288,6 +286,7 @@
 		E4D2C3F92AB2BBE8005FD6F4 /* HWMTimers Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				E48EF9462AB80A9E0086B159 /* HWMTimers Watch App.entitlements */,
 				E4080D952ABD11B800601A37 /* HWMTimers-Watch-App-Info.plist */,
 				E4D2C3FA2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift */,
 				E4D2C3FC2AB2BBE8005FD6F4 /* ContentView.swift */,
@@ -347,11 +346,9 @@
 		E4FABD462A9C41B300C93EA8 = {
 			isa = PBXGroup;
 			children = (
-				E48497D22ADE1BD300F12300 /* HWMTimersWatchWidgetExtension.entitlements */,
-				E4F55C022AD73F080025C3C5 /* HWMTimersShared */,
-				E4758B0D2AD6138300FFED40 /* README.md */,
 				E4F2B8AC2ABD4EF60027A38E /* Config.xcconfig */,
-				E48EF9462AB80A9E0086B159 /* HWMTimers Watch App.entitlements */,
+				E4758B0D2AD6138300FFED40 /* README.md */,
+				E4F55C022AD73F080025C3C5 /* HWMTimersShared */,
 				E4FABD512A9C41B300C93EA8 /* HWMTimers */,
 				E4FABD622A9C41B300C93EA8 /* HWMTimersTests */,
 				E4FABD6C2A9C41B400C93EA8 /* HWMTimersUITests */,
@@ -385,7 +382,6 @@
 			children = (
 				E48497B22ADCB23200F12300 /* HWMTimers.entitlements */,
 				E453767A2AA0484000BFA32C /* Settings */,
-				E4FABD922A9D9D3F00C93EA8 /* Extensions */,
 				E4FABD892A9D80F600C93EA8 /* Views */,
 				E4FABD7C2A9C4BBA00C93EA8 /* Model */,
 				E4FABD522A9C41B300C93EA8 /* HWMTimersApp.swift */,
@@ -448,14 +444,6 @@
 				E4FABD8A2A9D810400C93EA8 /* AssignmentView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		E4FABD922A9D9D3F00C93EA8 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E4FABD932A9D9D4D00C93EA8 /* HWMTimerTheme.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -771,7 +759,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4D2C3FD2AB2BBE8005FD6F4 /* ContentView.swift in Sources */,
-				E4AD0D662AB7E6BA003FD5BC /* HWMTimerTheme.swift in Sources */,
 				E4D2C3FB2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,7 +800,6 @@
 				E453767E2AA04B9B00BFA32C /* TimerNotificationService.swift in Sources */,
 				E4FABD8B2A9D810400C93EA8 /* AssignmentView.swift in Sources */,
 				E453767C2AA0485700BFA32C /* SettingsView.swift in Sources */,
-				E4FABD942A9D9D4D00C93EA8 /* HWMTimerTheme.swift in Sources */,
 				E4FABD8D2A9D823700C93EA8 /* AGAssignmentViewModel.swift in Sources */,
 				E47F56662AC1014500C55597 /* SettingsViewModel.swift in Sources */,
 			);
@@ -885,7 +871,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = HWMTimersWatchWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HWMTimersWatchWidget/HWMTimersWatchWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9J93HX6462;
@@ -921,7 +907,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = HWMTimersWatchWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HWMTimersWatchWidget/HWMTimersWatchWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9J93HX6462;
@@ -956,7 +942,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "HWMTimers Watch App.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "HWMTimers Watch App/HWMTimers Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HWMTimers Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 9J93HX6462;
@@ -988,7 +974,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "HWMTimers Watch App.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "HWMTimers Watch App/HWMTimers Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HWMTimers Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 9J93HX6462;
