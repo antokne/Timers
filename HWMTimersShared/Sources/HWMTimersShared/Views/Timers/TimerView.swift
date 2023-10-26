@@ -6,15 +6,24 @@
 //
 
 import SwiftUI
-import HWMTimersShared
 
-struct TimerView: View {
+public struct TimerView: View {
 	@EnvironmentObject private var watchSyncManager: WatchSyncManager
 
 	@ObservedObject var timerViewModel: TimerViewModel
 	
+	var titleFont: Font
+	var bodyFont: Font
+	var foregroundColor: Color
 	
-	var body: some View {
+	public init(titleFont: Font, bodyFont: Font, foregroundColor: Color, timerViewModel: TimerViewModel) {
+		self.titleFont = titleFont
+		self.bodyFont = bodyFont
+		self.foregroundColor = foregroundColor
+		self.timerViewModel = timerViewModel
+	}
+	
+	public var body: some View {
 		HStack {
 			if timerViewModel.timer.running == false {
 				HStack(spacing: 0) {
@@ -37,8 +46,8 @@ struct TimerView: View {
 					Picker(selection: $timerViewModel.selectedDuration) {
 						ForEach(AGHomeworldMobileTimerDuration.allCases) { duration in
 							Text(duration.name)
-								.font(.homeworld.bodyFixed)
-								.foregroundColor(.homeworld.blue)
+								.font(bodyFont)
+								.foregroundColor(foregroundColor)
 								.padding(2)
 //							Image(systemName: "\(duration.rawValue).circle.fill")
 //								.foregroundColor(.homeworld.blue)
@@ -46,7 +55,7 @@ struct TimerView: View {
 					} label: {
 						#if os(iOS)
 						Text("Select duration")
-							.foregroundColor(.homeworld.blue)
+							.foregroundColor(foregroundColor)
 						#endif
 					}
 					.modify { picker in
@@ -63,7 +72,7 @@ struct TimerView: View {
 					}
 					.overlay {
 						RoundedRectangle(cornerRadius: 4)
-							.stroke(Color.homeworld.blue, lineWidth:1)
+							.stroke(foregroundColor, lineWidth:1)
 					}
 
 				}
@@ -88,7 +97,7 @@ struct TimerView: View {
 				.frame(maxWidth: .infinity)
 			}
 		}
-		.font(.homeworld.title3)
+		.font(titleFont)
 	}
 	
 	func startTimer(timerViewModel: TimerViewModel) {
@@ -126,9 +135,9 @@ let watchSyncManager = WatchSyncManager()
 
 #Preview {
 	List {
-		TimerView(timerViewModel: timerViewModel)
+		TimerView(titleFont: .title3, bodyFont: .body, foregroundColor: .blue, timerViewModel: timerViewModel)
 			.listRowBackground(Color.clear)
-		TimerView(timerViewModel: timerViewModel2)
+		TimerView(titleFont: .title3, bodyFont: .body, foregroundColor: .blue, timerViewModel: timerViewModel2)
 			.listRowBackground(Color.clear)
 	}
 	.scrollContentBackground(.hidden)

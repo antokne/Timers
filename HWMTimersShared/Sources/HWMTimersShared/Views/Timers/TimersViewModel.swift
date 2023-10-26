@@ -9,16 +9,15 @@ import Foundation
 import UserNotifications
 import Combine
 import SwiftUI
-import HWMTimersShared
 
-protocol TimerNotificationProtocol: AnyObject {
+public protocol TimerNotificationProtocol: AnyObject {
 	func timerChanged()
 }
 
-class TimersViewModel : ObservableObject {
+public class TimersViewModel : ObservableObject {
 	
 	
-	@Published var timerViewModels: [TimerViewModel] = []
+	@Published public var timerViewModels: [TimerViewModel] = []
 	
 	private var timerCancellable: AnyCancellable?
 	
@@ -26,7 +25,7 @@ class TimersViewModel : ObservableObject {
 
 	private var cancellable: AnyCancellable?
 	
-	init() {
+	public init() {
 		var timerViewModel = TimerViewModel(timer: AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration:[.hr4, .hr8], type: .remoteMining, percentReduction: 100 - researchProcessSpeed), delegate: self)
 		
 		timerViewModels.append(timerViewModel)
@@ -87,7 +86,7 @@ class TimersViewModel : ObservableObject {
 		checkCurrentTimers()
 	}
 	
-	func checkCurrentNotifications() async {
+	public func checkCurrentNotifications() async {
 		
 		let requests = await getCurrentPendingNotifications()
 		for notificationRequest in requests {
@@ -118,6 +117,8 @@ class TimersViewModel : ObservableObject {
 		}
 	}
 	
+	/// Values received from remote via application context change
+	/// - Parameter applicationContext: the application context from remote.
 	private func updateValues(applicationContext: [String : Any]) {
 		
 		if let researchProcessSpeed = applicationContext[SettingsProcessSpeedKey] as? Int {
@@ -129,11 +130,13 @@ class TimersViewModel : ObservableObject {
 		   let timer = try? AGHomeworldMobileTimer.timer(from: changedTimerData) {
 			update(timer: timer)
 		}
+
+		updateAppGroupData()
 	}
 	
 	/// For Watch app only to listen for changes
 	/// - Parameter watchSyncManager: the watch sync manager.
-	func listenForContextChanges(watchSyncManager: WatchSyncManager) {
+	public func listenForContextChanges(watchSyncManager: WatchSyncManager) {
 		
 		guard cancellable == nil else {
 			return
@@ -150,7 +153,7 @@ class TimersViewModel : ObservableObject {
 
 extension TimersViewModel: TimerNotificationProtocol {
 	
-	func timerChanged() {
+	public func timerChanged() {
 		checkCurrentTimers()
 		updateAppGroupData()
 	}
@@ -160,6 +163,7 @@ extension TimersViewModel: TimerNotificationProtocol {
 
 extension TimersViewModel {
 	
+	/// Save configuration to the app group data and then ask the widgets to reload.
 	func updateAppGroupData() {
 		
 		let timers = timerViewModels.map { $0.timer }

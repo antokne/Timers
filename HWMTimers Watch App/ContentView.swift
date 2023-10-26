@@ -32,7 +32,10 @@ struct ContentView: View {
 												  fontBody: .homeworld.body)
 				
 				ForEach(viewModel.timerViewModels) { timerViewModel in
-					TimerView(timerViewModel: timerViewModel)
+					TimerView(titleFont: .homeworld.title3,
+							  bodyFont: .homeworld.bodyFixed,
+							  foregroundColor: .homeworld.blue,
+							  timerViewModel: timerViewModel)
 						.listRowBackground(Color.clear)
 						.listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
 				}

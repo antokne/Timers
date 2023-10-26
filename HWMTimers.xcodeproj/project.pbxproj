@@ -10,11 +10,6 @@
 		E4080D942ABD0EFC00601A37 /* Michroma-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4FABD8F2A9D9B2F00C93EA8 /* Michroma-Regular.ttf */; };
 		E453767C2AA0485700BFA32C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453767B2AA0485700BFA32C /* SettingsView.swift */; };
 		E453767E2AA04B9B00BFA32C /* TimerNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453767D2AA04B9B00BFA32C /* TimerNotificationService.swift */; };
-		E4758B072AD4DF0F00FFED40 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4758B062AD4DF0F00FFED40 /* TimerView.swift */; };
-		E4758B082AD4DF0F00FFED40 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4758B062AD4DF0F00FFED40 /* TimerView.swift */; };
-		E4758B092AD4E0BD00FFED40 /* TimersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD0D602AB7CEE7003FD5BC /* TimersViewModel.swift */; };
-		E4758B0B2AD4E19600FFED40 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4758B0A2AD4E19600FFED40 /* TimerViewModel.swift */; };
-		E4758B0C2AD4E19600FFED40 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4758B0A2AD4E19600FFED40 /* TimerViewModel.swift */; };
 		E47F56662AC1014500C55597 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F56652AC1014500C55597 /* SettingsViewModel.swift */; };
 		E48497BC2ADE0E3500F12300 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F55C0E2AD774D50025C3C5 /* WidgetKit.framework */; };
 		E48497BD2ADE0E3500F12300 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F55C102AD774D50025C3C5 /* SwiftUI.framework */; };
@@ -24,7 +19,6 @@
 		E48497CD2ADE13F400F12300 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F55C172AD774D50025C3C5 /* AppIntent.swift */; };
 		E48497CE2ADE1AF800F12300 /* HWMTimersWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E48497BB2ADE0E3500F12300 /* HWMTimersWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E48497D42ADE1CCE00F12300 /* HWMTimersShared in Frameworks */ = {isa = PBXBuildFile; productRef = E48497D32ADE1CCE00F12300 /* HWMTimersShared */; };
-		E4AD0D612AB7CEE7003FD5BC /* TimersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD0D602AB7CEE7003FD5BC /* TimersViewModel.swift */; };
 		E4AD0D652AB7E32D003FD5BC /* NiceNotifications in Frameworks */ = {isa = PBXBuildFile; productRef = E4AD0D642AB7E32D003FD5BC /* NiceNotifications */; };
 		E4AD0D662AB7E6BA003FD5BC /* HWMTimerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FABD932A9D9D4D00C93EA8 /* HWMTimerTheme.swift */; };
 		E4D2C3FB2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C3FA2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift */; };
@@ -152,8 +146,6 @@
 		E4080D952ABD11B800601A37 /* HWMTimers-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "HWMTimers-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E453767B2AA0485700BFA32C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E453767D2AA04B9B00BFA32C /* TimerNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNotificationService.swift; sourceTree = "<group>"; };
-		E4758B062AD4DF0F00FFED40 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		E4758B0A2AD4E19600FFED40 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		E4758B0D2AD6138300FFED40 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E47F56652AC1014500C55597 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		E48497B22ADCB23200F12300 /* HWMTimers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HWMTimers.entitlements; sourceTree = "<group>"; };
@@ -164,7 +156,6 @@
 		E48497C52ADE0E3600F12300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E48497D22ADE1BD300F12300 /* HWMTimersWatchWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HWMTimersWatchWidgetExtension.entitlements; sourceTree = "<group>"; };
 		E48EF9462AB80A9E0086B159 /* HWMTimers Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HWMTimers Watch App.entitlements"; sourceTree = "<group>"; };
-		E4AD0D602AB7CEE7003FD5BC /* TimersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersViewModel.swift; sourceTree = "<group>"; };
 		E4D2C3F82AB2BBE8005FD6F4 /* HWMTimersWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWMTimersWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2C3FA2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWMTimers_WatchApp.swift; sourceTree = "<group>"; };
 		E4D2C3FC2AB2BBE8005FD6F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -455,9 +446,6 @@
 			isa = PBXGroup;
 			children = (
 				E4FABD8A2A9D810400C93EA8 /* AssignmentView.swift */,
-				E4AD0D602AB7CEE7003FD5BC /* TimersViewModel.swift */,
-				E4758B0A2AD4E19600FFED40 /* TimerViewModel.swift */,
-				E4758B062AD4DF0F00FFED40 /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -783,11 +771,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4D2C3FD2AB2BBE8005FD6F4 /* ContentView.swift in Sources */,
-				E4758B082AD4DF0F00FFED40 /* TimerView.swift in Sources */,
 				E4AD0D662AB7E6BA003FD5BC /* HWMTimerTheme.swift in Sources */,
-				E4758B0C2AD4E19600FFED40 /* TimerViewModel.swift in Sources */,
 				E4D2C3FB2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift in Sources */,
-				E4AD0D612AB7CEE7003FD5BC /* TimersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,12 +808,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4758B092AD4E0BD00FFED40 /* TimersViewModel.swift in Sources */,
 				E4FABD552A9C41B300C93EA8 /* ContentView.swift in Sources */,
 				E4FABD532A9C41B300C93EA8 /* HWMTimersApp.swift in Sources */,
-				E4758B0B2AD4E19600FFED40 /* TimerViewModel.swift in Sources */,
 				E453767E2AA04B9B00BFA32C /* TimerNotificationService.swift in Sources */,
-				E4758B072AD4DF0F00FFED40 /* TimerView.swift in Sources */,
 				E4FABD8B2A9D810400C93EA8 /* AssignmentView.swift in Sources */,
 				E453767C2AA0485700BFA32C /* SettingsView.swift in Sources */,
 				E4FABD942A9D9D4D00C93EA8 /* HWMTimerTheme.swift in Sources */,

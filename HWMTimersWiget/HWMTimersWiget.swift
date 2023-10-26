@@ -71,10 +71,6 @@ struct HWMTimersWigetEntryView : View {
 struct HWMTimersWigetEntrySmallView : View {
 	var entry: HWMTimerTimelineProvider.Entry
 	
-	let backgroundGradient = LinearGradient(
-		colors: [Color.black, Color(red: 0.2, green: 0.2, blue: 0.2)],
-		startPoint: .top, endPoint: .bottom)
-	
 	var body: some View {
 		ZStack {
 			AccessoryWidgetBackground()
@@ -146,9 +142,7 @@ struct HWMTimersWigetEntryRectangularView : View {
 					}
 				}
 			}
-			.foregroundColor(.white)
 		}
-		.border(.blue)
 	}
 }
 
@@ -213,7 +207,7 @@ extension TimersWidgetConfigurationIntent {
 let timerRemoteMining = AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration:[.hr4, .hr8], type: .remoteMining, percentReduction: 0)
 let timerResearch = AGHomeworldMobileTimer(title: "Research", running: true, duration: [.hr4, .hr8], type: .research)
 
-#Preview(as: .accessoryCircular) {
+#Preview(as: .systemSmall) {
 	HWMTimersWiget()
 } timeline: {
 	TimersEntry(date: .now, timers: [timerRemoteMining, timerResearch], configuration: .smiley)

@@ -8,9 +8,8 @@
 import Foundation
 import SwiftUI
 import UserNotifications
-import HWMTimersShared
 
-class TimerViewModel : ObservableObject, Identifiable {
+public class TimerViewModel : ObservableObject, Identifiable {
 	
 	@Published var timer: AGHomeworldMobileTimer
 	
@@ -20,7 +19,7 @@ class TimerViewModel : ObservableObject, Identifiable {
 
 	@AppStorage(SettingsProcessSpeedKey) var researchProcessSpeed: Int = 100
 
-	init(timer: AGHomeworldMobileTimer, delegate: TimerNotificationProtocol?) {
+	public init(timer: AGHomeworldMobileTimer, delegate: TimerNotificationProtocol?) {
 		self.timer = timer
 		self.delegate = delegate
 	}

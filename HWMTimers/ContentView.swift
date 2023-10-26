@@ -62,7 +62,10 @@ struct ContentView: View {
 							.listRowBackground(Color.clear)
 						
 						ForEach(timersViewModel.timerViewModels) { timerViewModel in
-							TimerView(timerViewModel: timerViewModel)
+							TimerView(titleFont: .homeworld.title3,
+									  bodyFont: .homeworld.bodyFixed,
+									  foregroundColor: .homeworld.blue,
+									  timerViewModel: timerViewModel)
 								.listRowBackground(Color.clear)
 						}
 						
