@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E4080D942ABD0EFC00601A37 /* Michroma-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4FABD8F2A9D9B2F00C93EA8 /* Michroma-Regular.ttf */; };
+		E428F92F2AEB5EEF003EDC1B /* HWMTimers-Watch-App-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E428F92E2AEB5EEF003EDC1B /* HWMTimers-Watch-App-Info.plist */; };
 		E453767C2AA0485700BFA32C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453767B2AA0485700BFA32C /* SettingsView.swift */; };
 		E453767E2AA04B9B00BFA32C /* TimerNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453767D2AA04B9B00BFA32C /* TimerNotificationService.swift */; };
 		E47F56662AC1014500C55597 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F56652AC1014500C55597 /* SettingsViewModel.swift */; };
@@ -141,7 +142,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E4080D952ABD11B800601A37 /* HWMTimers-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "HWMTimers-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E428F92E2AEB5EEF003EDC1B /* HWMTimers-Watch-App-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HWMTimers-Watch-App-Info.plist"; sourceTree = "<group>"; };
 		E453767B2AA0485700BFA32C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E453767D2AA04B9B00BFA32C /* TimerNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNotificationService.swift; sourceTree = "<group>"; };
 		E4758B0D2AD6138300FFED40 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -287,7 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				E48EF9462AB80A9E0086B159 /* HWMTimers Watch App.entitlements */,
-				E4080D952ABD11B800601A37 /* HWMTimers-Watch-App-Info.plist */,
+				E428F92E2AEB5EEF003EDC1B /* HWMTimers-Watch-App-Info.plist */,
 				E4D2C3FA2AB2BBE8005FD6F4 /* HWMTimers_WatchApp.swift */,
 				E4D2C3FC2AB2BBE8005FD6F4 /* ContentView.swift */,
 				E4D2C3FE2AB2BBE9005FD6F4 /* Assets.xcassets */,
@@ -693,6 +694,7 @@
 				E4D2C4022AB2BBE9005FD6F4 /* Preview Assets.xcassets in Resources */,
 				E4080D942ABD0EFC00601A37 /* Michroma-Regular.ttf in Resources */,
 				E4D2C3FF2AB2BBE9005FD6F4 /* Assets.xcassets in Resources */,
+				E428F92F2AEB5EEF003EDC1B /* HWMTimers-Watch-App-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,7 +950,7 @@
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HWMTimers-Watch-App-Info.plist";
+				INFOPLIST_FILE = "HWMTimers Watch App/HWMTimers-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "HWM Timers";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -980,7 +982,7 @@
 				DEVELOPMENT_TEAM = 9J93HX6462;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HWMTimers-Watch-App-Info.plist";
+				INFOPLIST_FILE = "HWMTimers Watch App/HWMTimers-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "HWM Timers";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
