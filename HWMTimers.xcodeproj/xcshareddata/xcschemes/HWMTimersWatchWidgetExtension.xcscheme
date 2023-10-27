@@ -74,12 +74,21 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E48497BA2ADE0E3500F12300"
+            BuildableName = "HWMTimersWatchWidgetExtension.appex"
+            BlueprintName = "HWMTimersWatchWidgetExtension"
+            ReferencedContainer = "container:HWMTimers.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4FABD4E2A9C41B300C93EA8"
             BuildableName = "HWMTimers.app"
             BlueprintName = "HWMTimers"
             ReferencedContainer = "container:HWMTimers.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "_XCWidgetKind"

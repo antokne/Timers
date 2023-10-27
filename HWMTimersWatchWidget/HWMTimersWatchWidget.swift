@@ -10,22 +10,22 @@ import SwiftUI
 import HWMTimersShared
 
 struct HWMTimerTimelineProvider: AppIntentTimelineProvider {
-	func placeholder(in context: Context) -> TimersEntry {
-		TimersEntry(date: Date(), timers: timers, configuration: TimersWidgetConfigurationIntent())
+	func placeholder(in context: Context) -> TimersTimelineEntry {
+		TimersTimelineEntry(date: Date(), timers: timers)
 	}
 	
-	func snapshot(for configuration: TimersWidgetConfigurationIntent, in context: Context) async -> TimersEntry {
-		TimersEntry(date: Date(), timers: timers, configuration: configuration)
+	func snapshot(for configuration: TimersWidgetConfigurationIntent, in context: Context) async -> TimersTimelineEntry {
+		TimersTimelineEntry(date: Date(), timers: timers)
 	}
 	
-	func timeline(for configuration: TimersWidgetConfigurationIntent, in context: Context) async -> Timeline<TimersEntry> {
-		var entries: [TimersEntry] = []
+	func timeline(for configuration: TimersWidgetConfigurationIntent, in context: Context) async -> Timeline<TimersTimelineEntry> {
+		var entries: [TimersTimelineEntry] = []
 		
 		// Generate a timeline consisting of five entries an hour apart, starting from the current date.
 		let currentDate = Date()
 		for hourOffset in 0 ..< 5 {
 			let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-			let entry = TimersEntry(date: entryDate, timers: timers, configuration: configuration)
+			let entry = TimersTimelineEntry(date: entryDate, timers: timers)
 			entries.append(entry)
 		}
 		
@@ -49,16 +49,16 @@ struct HWMTimerTimelineProvider: AppIntentTimelineProvider {
 	}
 }
 
-struct TimersEntry: TimelineEntry {
-	var date: Date
-	let timers: [AGHomeworldMobileTimer]
-	let configuration: TimersWidgetConfigurationIntent
-	
-	var firstRunningTimer: AGHomeworldMobileTimer? {
-		let earliestTimer = timers.min()
-		return (earliestTimer?.running ?? false) ? earliestTimer : nil
-	}
-}
+//struct TimersEntry: TimelineEntry {
+//	var date: Date
+//	let timers: [AGHomeworldMobileTimer]
+//	let configuration: TimersWidgetConfigurationIntent
+//	
+//	var firstRunningTimer: AGHomeworldMobileTimer? {
+//		let earliestTimer = timers.min()
+//		return (earliestTimer?.running ?? false) ? earliestTimer : nil
+//	}
+//}
 
 struct HWMTimersWatchWidgetEntryView : View {
 	@Environment(\.widgetFamily) var family: WidgetFamily
@@ -210,41 +210,29 @@ struct HWMTimersWatchWidgetExtension: Widget {
 	}
 }
 
-extension TimersWidgetConfigurationIntent {
-	fileprivate static var smiley: TimersWidgetConfigurationIntent {
-		let intent = TimersWidgetConfigurationIntent()
-		return intent
-	}
-	
-	fileprivate static var starEyes: TimersWidgetConfigurationIntent {
-		let intent = TimersWidgetConfigurationIntent()
-		return intent
-	}
-}
-
 let timerRemoteMining = AGHomeworldMobileTimer(title: "Remote Mining", running: false, duration:[.hr4, .hr8], type: .remoteMining, percentReduction: 0)
 let timerResearch = AGHomeworldMobileTimer(title: "Research", running: true, duration: [.hr4, .hr8], type: .research)
 
 #Preview(as: .accessoryCircular) {
 	HWMTimersWatchWidgetExtension()
 } timeline: {
-	TimersEntry(date: .now, timers: [timerRemoteMining, timerResearch], configuration: .smiley)
+	TimersTimelineEntry(date: .now, timers: [timerRemoteMining, timerResearch])
 }
 
 #Preview(as: .accessoryInline) {
 	HWMTimersWatchWidgetExtension()
 } timeline: {
-	TimersEntry(date: .now, timers: [timerRemoteMining, timerResearch], configuration: .smiley)
+	TimersTimelineEntry(date: .now, timers: [timerRemoteMining, timerResearch])
 }
 
 #Preview(as: .accessoryCorner) {
 	HWMTimersWatchWidgetExtension()
 } timeline: {
-	TimersEntry(date: .now, timers: [timerRemoteMining, timerResearch], configuration: .smiley)
+	TimersTimelineEntry(date: .now, timers: [timerRemoteMining, timerResearch])
 }
 
 #Preview(as: .accessoryRectangular) {
 	HWMTimersWatchWidgetExtension()
 } timeline: {
-	TimersEntry(date: .now, timers: [timerRemoteMining, timerResearch], configuration: .smiley)
+	TimersTimelineEntry(date: .now, timers: [timerRemoteMining, timerResearch])
 }

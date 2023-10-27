@@ -1113,6 +1113,21 @@
                   endingLineNumber = "60"
                   offsetFromSymbolStart = "716">
                </Location>
+               <Location
+                  uuid = "9A0F5F98-C4A2-41F7-9CB8-63F34A364D64 - d75bebeaa651a865"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HWMTimersShared.AGHomeworldMobileTimer.init(title: Swift.String, running: Swift.Bool, duration: Swift.Array&lt;HWMTimersShared.AGHomeworldMobileTimerDuration&gt;, type: HWMTimersShared.AGHomeworldMobileTimerType, percentReduction: Swift.Int) -&gt; HWMTimersShared.AGHomeworldMobileTimer"
+                  moduleName = "HWMTimersWatchWidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ants/dev/antz/HWMTimers/HWMTimersShared/Sources/HWMTimersShared/Models/AGHomeworldMobileTimer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "588">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1162,6 +1177,22 @@
             endingLineNumber = "64"
             landmarkName = "checkCurrentTimers()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F8AD8B8-6AD5-4294-97B9-C4B417FA18F3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWMTimersWiget/HWMTimersWigetBundle.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
