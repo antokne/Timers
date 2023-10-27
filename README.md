@@ -22,3 +22,5 @@ Also supports two timers:
 * Research - including a % bonus configured in settings and either 4 or 8 hrs.
 
 Timers are supported on phone app and watch.
+
+Widgets are supported from iOS 17 and watchOS 10.
