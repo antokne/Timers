@@ -19,7 +19,7 @@ Currently supports:
 
 Also supports two timers:
 * Remote mining - currently 4 or 8 hrs
-* Research - including a % bonus configured in settings and either 4 or 8 hrs.
+* Research - change configure process speed % offset to match research module.
 
 Timers are supported on phone app and watch.
 

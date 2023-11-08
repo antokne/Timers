@@ -43,5 +43,6 @@ public struct ResearchView: View {
 
 #Preview {
 	ResearchView(forgroundColor: .white)
-		.frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
+		.frame(width: 100, height: 100)
+		.background(.blue)
 }
