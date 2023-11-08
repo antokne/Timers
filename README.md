@@ -24,3 +24,8 @@ Also supports two timers:
 Timers are supported on phone app and watch.
 
 Widgets are supported from iOS 17 and watchOS 10.
+
+## Demo
+
+https://github.com/antokne/Timers/assets/732803/3c66c564-6be2-43cc-a245-1d307e314100
+
